@@ -9,7 +9,7 @@
   "scripts": {
     "start": "sanity start",
     "test": "sanity check",
-    "format": "prettier --write \"**/*.{js,jsx,json,md}\" \"!.cache/**\" \"!node_modules/**\" \"!public/**\""
+    "format": "prettier --write \"**/*.{js,jsx,json,md}\" \"!.cache/**\" \"!node_modules/**\" \"!dist/**\""
   },
   "keywords": [
     "sanity"
