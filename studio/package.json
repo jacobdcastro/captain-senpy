@@ -1,5 +1,5 @@
 {
-  "name": "captainsenpy",
+  "name": "captain-senpy-studio",
   "private": true,
   "version": "1.0.0",
   "description": "",
@@ -9,7 +9,7 @@
   "scripts": {
     "start": "sanity start",
     "test": "sanity check",
-    "format": "prettier --write \"**/*.{js,jsx,json,md}\" \"!.cache/**\" \"!node_modules/**\" \"!dist/**\""
+    "format": "prettier --write \"**/*.{js,jsx,json,md}\" \"!node_modules/**\" \"!dist/**\""
   },
   "keywords": [
     "sanity"
@@ -26,5 +26,14 @@
     "react": "^16.2",
     "react-dom": "^16.2"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "prettier": "^1.19.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jacobdcastro/captain-senpy"
+  },
+  "bugs": {
+    "url": "https://github.com/jacobdcastro/captain-senpy/issues"
+  }
 }
