@@ -1,0 +1,23 @@
+{
+  "name": "captain-senpy-repo",
+  "private": true,
+  "version": "1.0.0",
+  "description": "",
+  "main": "package.json",
+  "author": "Jacob Castro <jdcastro.business@gmail.com>",
+  "license": "UNLICENSED",
+  "scripts": {
+    "format": "prettier --write \"**/*.{js,jsx,json,md}\" \"!node_modules/**\" \"!dist/**\" \"!public/**\""
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "prettier": "^1.19.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jacobdcastro/captain-senpy"
+  },
+  "bugs": {
+    "url": "https://github.com/jacobdcastro/captain-senpy/issues"
+  }
+}
