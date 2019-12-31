@@ -14,5 +14,5 @@ import comicScene from './objects/imageWithMeta';
 
 export default createSchema({
   name: 'captain-senpy-schema',
-  types: schemaTypes.concat([blogPost, product, imageWithMeta, comicAct, comicScene]),
+  types: schemaTypes.concat([blogPost, product, comic, imageWithMeta, comicAct, comicScene]),
 });
