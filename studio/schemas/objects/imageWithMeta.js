@@ -21,7 +21,7 @@ export default {
     {
       name: 'imgTitle',
       title: 'Image Title',
-      type: 'text',
+      type: 'string',
       description: 'A non-descriptive title of the image.',
     },
   ],

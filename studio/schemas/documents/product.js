@@ -1,5 +1,3 @@
-import imageWithMeta from '../objects/imageWithMeta';
-
 export default {
   name: 'product',
   title: 'Product',
