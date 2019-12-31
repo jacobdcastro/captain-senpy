@@ -17,7 +17,7 @@ export default {
       name: 'scenes',
       title: 'Scenes',
       type: 'array',
-      of: [{ type: 'comicScene' }],
+      of: [{ type: 'scene' }],
     },
     {
       name: 'parentComic',

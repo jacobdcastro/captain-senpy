@@ -22,7 +22,7 @@ export default {
       name: 'parentComic',
       title: 'Comic',
       type: 'reference',
-      to: [{ type: 'comicAct' }, { type: 'comic' }],
+      to: [{ type: 'act' }, { type: 'comic' }],
     },
   ],
 };
