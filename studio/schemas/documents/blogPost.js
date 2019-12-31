@@ -1,4 +1,4 @@
-import { slugify } from '../lib/slugify';
+import { slugify } from '../../lib/slugify';
 
 export default {
   name: 'blogPost',
