@@ -1,10 +1,33 @@
 export default {
   widgets: [
     {
+      name: 'structure-menu',
+    },
+    {
+      name: 'document-list',
+      options: {
+        title: 'Last Edited Blog Posts',
+        order: '_updatedAt desc',
+        types: ['blogPost'],
+      },
+      layout: {
+        width: 'small',
+        height: 'small',
+      },
+    },
+    {
       name: 'project-info',
+      layout: {
+        width: 'small',
+        height: 'small',
+      },
     },
     {
       name: 'project-users',
+      layout: {
+        width: 'medium',
+        height: 'small',
+      },
     },
     {
       name: 'netlify',
@@ -24,6 +47,10 @@ export default {
             name: 'captain-senpy-www',
           },
         ],
+      },
+      layout: {
+        width: 'small',
+        height: 'small',
       },
     },
   ],
