@@ -4,15 +4,17 @@ export default {
   type: 'document',
   fields: [
     {
-      name: 'title',
-      title: 'Title',
+      name: 'name',
+      title: 'Product Name',
       type: 'string',
+      validation: Rule => Rule.required(),
     },
     {
       name: 'description',
       title: 'Description',
       type: 'array',
       of: [{ type: 'block' }],
+      validation: Rule => Rule.required(),
     },
     {
       name: 'productImg',
@@ -30,6 +32,7 @@ export default {
       name: 'inStock',
       title: 'In Stock',
       type: 'boolean',
+      description: 'If left unspecified, the site will assume it is NOT in stock.',
     },
   ],
 };

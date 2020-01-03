@@ -9,6 +9,7 @@ export default {
       name: 'title',
       title: 'Title',
       type: 'string',
+      validation: Rule => Rule.required(),
     },
     {
       name: 'subtitle',
@@ -24,17 +25,19 @@ export default {
         maxLength: 200,
         slugify: input => slugify(input),
       },
+      validation: Rule => Rule.required(),
     },
     {
       name: 'content',
       title: 'Content',
       type: 'array',
       of: [{ type: 'block' }],
+      validation: Rule => Rule.required(),
     },
     {
       name: 'coverImg',
       title: 'Cover Image',
-      type: 'image',
+      type: 'imageWithMeta',
     },
     {
       name: 'published',
@@ -44,6 +47,7 @@ export default {
         timeStep: 5,
         calendarTodayLabel: 'Today',
       },
+      validation: Rule => Rule.required(),
     },
   ],
 };

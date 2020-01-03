@@ -1,7 +1,7 @@
 export default {
-  name: 'scene',
-  title: 'Comic Scene',
-  type: 'object',
+  name: 'act',
+  title: 'Comic Act',
+  type: 'document',
   fields: [
     {
       name: 'title',
@@ -9,20 +9,21 @@ export default {
       type: 'string',
     },
     {
-      name: 'sceneNum',
-      title: 'Scene Number',
+      name: 'actNum',
+      title: 'Act Number',
       type: 'number',
     },
     {
-      name: 'comicImg',
-      title: 'Comic Image',
-      type: 'imageWithMeta',
+      name: 'scenes',
+      title: 'Scenes',
+      type: 'array',
+      of: [{ type: 'scene' }],
     },
     {
       name: 'parentComic',
       title: 'Comic',
       type: 'reference',
-      to: [{ type: 'act' }, { type: 'comic' }],
+      to: [{ type: 'comic' }],
     },
   ],
 };

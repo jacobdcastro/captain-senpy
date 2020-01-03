@@ -7,6 +7,14 @@ export default {
       name: 'image',
       title: 'Image',
       type: 'image',
+      validation: Rule => Rule.required(),
+    },
+    {
+      name: 'imgTitle',
+      title: 'Image Title',
+      type: 'string',
+      description: 'A non-descriptive title of the image.',
+      validation: Rule => Rule.required(),
     },
     {
       name: 'alt',
@@ -17,12 +25,7 @@ export default {
       options: {
         isHighlighted: true,
       },
-    },
-    {
-      name: 'imgTitle',
-      title: 'Image Title',
-      type: 'string',
-      description: 'A non-descriptive title of the image.',
+      validation: Rule => Rule.required(),
     },
   ],
 };
