@@ -6,24 +6,24 @@ export default {
     {
       name: 'title',
       title: 'Title',
-      type: 'string'
+      type: 'string',
     },
     {
       name: 'actNum',
       title: 'Act Number',
-      type: 'number'
+      type: 'number',
     },
     {
       name: 'episodes',
       title: 'Episodes',
       type: 'array',
-      of: [{ type: 'episode' }]
+      of: [{ type: 'episode' }],
     },
     {
       name: 'parentComic',
       title: 'Comic',
       type: 'reference',
-      to: [{ type: 'comic' }]
-    }
-  ]
-}
+      to: [{ type: 'comic' }],
+    },
+  ],
+};

@@ -1,4 +1,4 @@
-import { slugify } from '../../lib/slugify'
+import { slugify } from '../../lib/slugify';
 
 export default {
   name: 'comic',
@@ -8,19 +8,19 @@ export default {
     {
       name: 'title',
       title: 'Title',
-      type: 'string'
+      type: 'string',
     },
     {
       name: 'summary',
       title: 'Summary',
       type: 'array',
-      of: [{ type: 'block' }]
+      of: [{ type: 'block' }],
     },
     {
       name: 'acts',
       title: 'Acts',
       type: 'array',
-      of: [{ type: 'act' }]
+      of: [{ type: 'act' }],
     },
     {
       name: 'slug',
@@ -29,8 +29,8 @@ export default {
       options: {
         source: 'title',
         maxLength: 200,
-        slugify: input => slugify(input)
-      }
-    }
-  ]
-}
+        slugify: input => slugify(input),
+      },
+    },
+  ],
+};

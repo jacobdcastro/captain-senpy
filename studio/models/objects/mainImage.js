@@ -3,7 +3,7 @@ export default {
   type: 'image',
   title: 'Image',
   options: {
-    hotspot: true
+    hotspot: true,
   },
   fields: [
     {
@@ -11,7 +11,7 @@ export default {
       title: 'Image Title',
       type: 'string',
       description: 'A non-descriptive title of the image.',
-      validation: Rule => Rule.required()
+      validation: Rule => Rule.required(),
     },
     {
       name: 'alt',
@@ -21,14 +21,14 @@ export default {
         'Some of your visitors cannot see images, be blind, color-blind, or low-sighted; alternative text helps describe the image for people who need it! Be descriptive, yet concise (1 sentence max, unless for comics).',
       validation: Rule => Rule.error('You have to fill out the alternative text.').required(),
       options: {
-        isHighlighted: true
-      }
-    }
+        isHighlighted: true,
+      },
+    },
   ],
   preview: {
     select: {
       imageUrl: 'asset.url',
-      title: 'caption'
-    }
-  }
-}
+      title: 'caption',
+    },
+  },
+};

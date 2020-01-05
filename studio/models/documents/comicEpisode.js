@@ -6,23 +6,23 @@ export default {
     {
       name: 'title',
       title: 'Title',
-      type: 'string'
+      type: 'string',
     },
     {
       name: 'episodeNum',
       title: 'Episode Number',
-      type: 'number'
+      type: 'number',
     },
     {
       name: 'comicImg',
       title: 'Comic Image',
-      type: 'mainImage'
+      type: 'mainImage',
     },
     {
       name: 'parentComic',
       title: 'Comic',
       type: 'reference',
-      to: [{ type: 'act' }, { type: 'comic' }]
-    }
-  ]
-}
+      to: [{ type: 'act' }, { type: 'comic' }],
+    },
+  ],
+};

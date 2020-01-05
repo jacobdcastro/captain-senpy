@@ -1,12 +1,12 @@
-import S from '@sanity/desk-tool/structure-builder'
-import MdSettings from 'react-icons/lib/md/settings'
-import MdPerson from 'react-icons/lib/md/person'
-import MdLayers from 'react-icons/lib/md/layers'
-import MdInsertDriveFile from 'react-icons/lib/md/insert-drive-file'
-import MdShoppingCart from 'react-icons/lib/md/shopping-cart'
+import S from '@sanity/desk-tool/structure-builder';
+import MdSettings from 'react-icons/lib/md/settings';
+import MdPerson from 'react-icons/lib/md/person';
+import MdLayers from 'react-icons/lib/md/layers';
+import MdInsertDriveFile from 'react-icons/lib/md/insert-drive-file';
+import MdShoppingCart from 'react-icons/lib/md/shopping-cart';
 
 const hiddenDocTypes = listItem =>
-  !['author', 'blogPost', 'product', 'sitePage', 'siteSettings'].includes(listItem.getId())
+  !['author', 'blogPost', 'product', 'sitePage', 'siteSettings'].includes(listItem.getId());
 
 export default () =>
   S.list()
@@ -50,5 +50,5 @@ export default () =>
             .id('siteSettings')
             .schemaType('siteSettings')
             .documentId('siteSettings')
-        )
-    ])
+        ),
+    ]);

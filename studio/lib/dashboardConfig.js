@@ -4,7 +4,7 @@ export default {
     {
       name: 'document-list',
       options: { title: 'Recent blog posts', order: '_createdAt desc', types: ['post'] },
-      layout: { width: 'medium' }
+      layout: { width: 'medium' },
     },
     {
       name: 'project-info',
@@ -20,48 +20,48 @@ export default {
                   buildHookId: '5dfdbc3123a010eada502c14',
                   title: 'Studio',
                   name: 'captain-senpy-studio',
-                  apiId: 'ccd3231b-fe89-43ed-9fc2-c5d2ed643879'
+                  apiId: 'ccd3231b-fe89-43ed-9fc2-c5d2ed643879',
                 },
                 {
                   buildHookId: '5dfdbc3131224464ae0b4f29',
                   title: 'Website',
                   name: 'captain-senpy-www',
-                  apiId: '98620c91-a9c2-462c-b1b6-ef0b3819a712'
-                }
-              ]
-            }
-          }
+                  apiId: '98620c91-a9c2-462c-b1b6-ef0b3819a712',
+                },
+              ],
+            },
+          },
         ],
         data: [
           {
             title: 'Website',
             value: 'https://captain-senpy-www.netlify.com/',
-            category: 'apps'
+            category: 'apps',
           },
           {
             title: 'Studio Site',
             value: 'https://captain-senpy-studio.netlify.com/',
-            category: 'apps'
+            category: 'apps',
           },
           {
             title: 'Full Codebase',
             value: 'https://github.com/jacobdcastro/captain-senpy',
-            category: 'code'
+            category: 'code',
           },
           {
             title: 'Website',
             value:
               'https://github.com/jacobdcastro/captain-senpy/tree/master/DefaultDialog_footerWithShadow_-nDKw',
-            category: 'code'
+            category: 'code',
           },
           {
             title: 'Studio',
             value: 'https://github.com/jacobdcastro/captain-senpy/tree/master/studio',
-            category: 'code'
-          }
-        ]
-      }
+            category: 'code',
+          },
+        ],
+      },
     },
-    { name: 'project-users', layout: { height: 'auto' } }
-  ]
-}
+    { name: 'project-users', layout: { height: 'auto' } },
+  ],
+};
