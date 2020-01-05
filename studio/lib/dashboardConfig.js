@@ -1,57 +1,47 @@
 export default {
   widgets: [
-    {
-      name: 'structure-menu',
-    },
-    {
-      name: 'document-list',
-      options: {
-        title: 'Last Edited Blog Posts',
-        order: '_updatedAt desc',
-        types: ['blogPost'],
-      },
-      layout: {
-        width: 'small',
-        height: 'small',
-      },
-    },
+    { name: 'structure-menu' },
     {
       name: 'project-info',
-      layout: {
-        width: 'small',
-        height: 'small',
-      },
-    },
-    {
-      name: 'project-users',
-      layout: {
-        width: 'medium',
-        height: 'small',
-      },
-    },
-    {
-      name: 'netlify',
       options: {
-        title: 'Captain Senpy Deploys',
-        sites: [
+        __experimental_before: [
           {
-            title: 'Studio',
-            apiId: 'ccd3231b-fe89-43ed-9fc2-c5d2ed643879',
-            buildHookId: 'https://api.netlify.com/build_hooks/5dfdbc3123a010eada502c14',
-            name: 'captain-senpy-studio',
-          },
-          {
-            title: 'Website',
-            apiId: '98620c91-a9c2-462c-b1b6-ef0b3819a712',
-            buildHookId: 'https://api.netlify.com/build_hooks/5dfdbc3131224464ae0b4f29',
-            name: 'captain-senpy-www',
-          },
+            name: 'netlify',
+            options: {
+              description:
+                'NOTE: Because these sites are static builds, they need to be re-deployed to see the changes when documents are published.',
+              sites: [
+                {
+                  buildHookId: '5e0fdd954040ece79c167605',
+                  title: 'Sanity Studio',
+                  name: 'sanity-gatsby-blog-studio-e5aart3c',
+                  apiId: '939e4ee0-4ced-450b-8a2d-e948f3a62abd'
+                },
+                {
+                  buildHookId: '5e0fdd958f2580942fcb1401',
+                  title: 'Blog Website',
+                  name: 'sanity-gatsby-blog-web-18yu2mg2',
+                  apiId: '7a4a5402-3e1f-4ca6-821d-5ad212a46811'
+                }
+              ]
+            }
+          }
         ],
-      },
-      layout: {
-        width: 'small',
-        height: 'small',
-      },
+        data: [
+          {
+            title: 'GitHub repo',
+            value: 'https://github.com/jacobdcastro/sanity-gatsby-blog',
+            category: 'Code'
+          },
+          { title: 'Frontend', value: 'https://sanity-gatsby-blog-web-18yu2mg2.netlify.com', category: 'apps' }
+        ]
+      }
     },
-  ],
-};
+    { name: 'project-users', layout: { height: 'auto' } },
+    {
+      name: 'document-list',
+      options: { title: 'Recent blog posts', order: '_createdAt desc', types: ['post'] },
+      layout: { width: 'medium' }
+    }
+  ]
+}
