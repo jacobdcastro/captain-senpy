@@ -6,7 +6,7 @@ import MdInsertDriveFile from 'react-icons/lib/md/insert-drive-file';
 import MdShoppingCart from 'react-icons/lib/md/shopping-cart';
 
 const hiddenDocTypes = listItem =>
-  !['author', 'blogPost', 'product', 'sitePage', 'siteSettings'].includes(listItem.getId());
+  !['author', 'blogPost', 'comicAct', 'comicEpisode', 'product', 'sitePage', 'siteSettings'].includes(listItem.getId());
 
 export default () =>
   S.list()
@@ -29,6 +29,11 @@ export default () =>
         .icon(MdPerson)
         .schemaType('author')
         .child(S.documentTypeList('author').title('Authors')),
+        
+      S.listItem()
+        .title('Alerts')
+        .icon(MdPerson)
+        .child(S.documentTypeList('alerts').title('Alerts')),
 
       S.listItem()
         .title('Store')

@@ -1,20 +1,20 @@
 {
   "private": true,
-  "name": "sanity-gatsby-blog-studio",
+  "name": "captain-senpy-studio",
   "version": "1.0.4",
   "main": "package.json",
-  "author": "Sanity <hello@sanity.io>",
+  "author": "Jacob D. Castro <jdcastro.business@gmail.com>",
   "scripts": {
     "dev": "sanity start",
-    "format": "prettier-eslint --write \"**/*.js\" \"!node_modules/**\"",
     "build": "sanity build",
     "graphql-deploy": "sanity graphql deploy --playground",
+    "format": "prettier-eslint --write \"**/*.js\" \"!node_modules/**\"",
     "lint": "eslint .",
     "test": "sanity check"
   },
   "dependencies": {
     "@sanity/base": "^0.147.6",
-    "@sanity/cli": "^0.147",
+    "@sanity/cli": "^0.147.3",
     "@sanity/components": "^0.147.6",
     "@sanity/core": "^0.147.6",
     "@sanity/dashboard": "^0.147",
