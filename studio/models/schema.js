@@ -8,7 +8,6 @@ import comic from './documents/comic';
 import comicAct from './documents/comicAct';
 import comicEpisode from './documents/comicEpisode';
 import product from './documents/product';
-import sitePage from './documents/sitePage';
 import siteSettings from './documents/siteSettings';
 
 // object types
@@ -27,7 +26,6 @@ export default createSchema({
     comicAct,
     comicEpisode,
     product,
-    sitePage,
     siteSettings,
     mainImage,
     authorReference,

@@ -6,7 +6,15 @@ import MdInsertDriveFile from 'react-icons/lib/md/insert-drive-file';
 import MdShoppingCart from 'react-icons/lib/md/shopping-cart';
 
 const hiddenDocTypes = listItem =>
-  !['author', 'blogPost', 'comicAct', 'comicEpisode', 'product', 'sitePage', 'siteSettings'].includes(listItem.getId());
+  ![
+    'author',
+    'blogPost',
+    'comicAct',
+    'comicEpisode',
+    'product',
+    'sitePage',
+    'siteSettings',
+  ].includes(listItem.getId());
 
 export default () =>
   S.list()
@@ -18,18 +26,38 @@ export default () =>
         .schemaType('blogPost')
         .child(S.documentTypeList('blogPost').title('Blog posts')),
 
-      S.listItem()
-        .title('Site Pages')
-        .icon(MdLayers)
-        .schemaType('sitePage')
-        .child(S.documentTypeList('sitePage').title('Site Pages')),
+      // S.listItem()
+      //   .title('Site Pages')
+      //   .icon(MdLayers)
+      //   .child(
+      //     S.listItem()
+      //       .title('Home Page')
+      //       .icon(MdLayers)
+      //       .schemaType('indexPageData')
+      //       .child(S.documentTypeList('indexPageData').title('Home Page')),
+      //     S.listItem()
+      //       .title('Blog Page')
+      //       .icon(MdLayers)
+      //       .schemaType('blogPageData')
+      //       .child(S.documentTypeList('blogPageData').title('Blog Page')),
+      //     S.listItem()
+      //       .title('Comics Page')
+      //       .icon(MdLayers)
+      //       .schemaType('comicsPageData')
+      //       .child(S.documentTypeList('comicsPageData').title('Comics Page')),
+      //     S.listItem()
+      //       .title('Store Page')
+      //       .icon(MdLayers)
+      //       .schemaType('storePageData')
+      //       .child(S.documentTypeList('storePageData').title('Store Page'))
+      //   ),
 
       S.listItem()
         .title('Authors')
         .icon(MdPerson)
         .schemaType('author')
         .child(S.documentTypeList('author').title('Authors')),
-        
+
       // S.listItem()
       //   .title('Alerts')
       //   .icon(MdPerson)
