@@ -30,10 +30,10 @@ export default () =>
         .schemaType('author')
         .child(S.documentTypeList('author').title('Authors')),
         
-      S.listItem()
-        .title('Alerts')
-        .icon(MdPerson)
-        .child(S.documentTypeList('alerts').title('Alerts')),
+      // S.listItem()
+      //   .title('Alerts')
+      //   .icon(MdPerson)
+      //   .child(S.documentTypeList('alerts').title('Alerts')),
 
       S.listItem()
         .title('Store')
