@@ -12,7 +12,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Captain Senpy`,
+        name: `Captain Senpy Web Comics`,
         short_name: `senpy`,
         start_url: `/`,
         // background_color: `#663399`,
