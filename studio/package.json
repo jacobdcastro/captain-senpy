@@ -5,6 +5,7 @@
   "main": "package.json",
   "author": "Jacob D. Castro <jdcastro.business@gmail.com>",
   "scripts": {
+    "start": "sanity start",
     "dev": "sanity start",
     "build": "sanity build",
     "graphql-deploy": "sanity graphql deploy --playground",
