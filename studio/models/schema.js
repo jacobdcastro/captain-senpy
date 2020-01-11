@@ -1,6 +1,12 @@
 import createSchema from 'part:@sanity/base/schema-creator';
 import schemaTypes from 'all:part:@sanity/base/schema-type';
 
+// site page schemas
+import indexPage from './documents/pages/indexPage';
+import blogPage from './documents/pages/blogPage';
+import comicsPage from './documents/pages/comicsPage';
+import storePage from './documents/pages/storePage';
+
 // document schemas
 import author from './documents/author';
 import blogPost from './documents/blogPost';
@@ -18,8 +24,12 @@ import mainImage from './objects/mainImage';
 import authorReference from './objects/authorReference';
 
 export default createSchema({
-  name: 'captian-senpy',
+  name: 'captain-senpy',
   types: schemaTypes.concat([
+    indexPage,
+    blogPage,
+    comicsPage,
+    storePage,
     author,
     blogPost,
     comic,
