@@ -50,8 +50,7 @@ export default {
           },
           {
             title: 'Website',
-            value:
-              'https://github.com/jacobdcastro/captain-senpy/tree/master/DefaultDialog_footerWithShadow_-nDKw',
+            value: 'https://github.com/jacobdcastro/captain-senpy/tree/master/www',
             category: 'code',
           },
           {
