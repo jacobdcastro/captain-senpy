@@ -19,10 +19,10 @@ export default {
       type: 'mainImage',
     },
     {
-      name: 'parentComic',
-      title: 'Comic',
+      name: 'parenAct',
+      title: 'Act',
       type: 'reference',
-      to: [{ type: 'act' }, { type: 'comic' }],
+      to: [{ type: 'act' }],
     },
   ],
 };
