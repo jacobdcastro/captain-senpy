@@ -9,8 +9,9 @@ const hiddenDocTypes = listItem =>
   ![
     'author',
     'blogPost',
-    'comicAct',
-    'comicEpisode',
+    'act',
+    'comic',
+    'episode',
     'product',
     'siteSettings',
     'indexPage',
@@ -77,10 +78,16 @@ export default () =>
         ),
 
       S.listItem()
-        .title('Authors')
+        .title('Crew')
         .icon(MdPerson)
         .schemaType('author')
-        .child(S.documentTypeList('author').title('Authors')),
+        .child(S.documentTypeList('author').title('Crew M8s')),
+
+      S.listItem()
+        .title('Comic')
+        .icon(MdPerson)
+        .schemaType('act')
+        .child(S.documentTypeList('act').title('Acts')),
 
       // S.listItem()
       //   .title('Alerts')

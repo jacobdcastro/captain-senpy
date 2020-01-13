@@ -16,6 +16,17 @@ export default {
       description: 'Describe your blog for search engines and social media.',
     },
     {
+      name: 'image',
+      type: 'mainImage',
+      title: 'Image',
+    },
+    {
+      name: 'favicon',
+      type: 'image',
+      title: 'Favicon',
+      description: 'This image used in browser tabs. Keep image at a small resolution!',
+    },
+    {
       name: 'keywords',
       type: 'array',
       title: 'Keywords',
@@ -24,13 +35,6 @@ export default {
       options: {
         layout: 'tags',
       },
-    },
-    {
-      name: 'author',
-      type: 'reference',
-      description: 'Publish an author and set a reference to them here.',
-      title: 'Author',
-      to: [{ type: 'author' }],
     },
   ],
 };

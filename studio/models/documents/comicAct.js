@@ -20,10 +20,11 @@ export default {
       of: [{ type: 'episode' }],
     },
     {
-      name: 'parentComic',
-      title: 'Comic',
-      type: 'reference',
-      to: [{ type: 'comic' }],
+      name: 'description',
+      type: 'excerptPortableText',
+      title: 'Page Description',
+      description:
+        'This ends up on summary pages, on Google, when people share your post in social media.',
     },
   ],
 };

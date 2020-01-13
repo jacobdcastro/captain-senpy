@@ -11,7 +11,6 @@ export default {
       title: 'Image Title',
       type: 'string',
       description: 'A non-descriptive title of the image.',
-      validation: Rule => Rule.required(),
     },
     {
       name: 'alt',
