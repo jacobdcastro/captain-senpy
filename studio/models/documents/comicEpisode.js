@@ -9,20 +9,21 @@ export default {
       type: 'string',
     },
     {
-      name: 'episodeNum',
-      title: 'Episode Number',
-      type: 'number',
-    },
-    {
       name: 'comicImg',
       title: 'Comic Image',
       type: 'mainImage',
     },
     {
-      name: 'parenAct',
-      title: 'Act',
-      type: 'reference',
-      to: [{ type: 'act' }],
+      name: 'description',
+      type: 'excerptPortableText',
+      title: 'Page Description',
+    },
+    {
+      name: 'keywords',
+      title: 'Keywords',
+      type: 'array',
+      of: [{ type: 'string' }],
+      options: {},
     },
   ],
 };
