@@ -22,6 +22,7 @@ import bioPortableText from './objects/bioPortableText';
 import excerptPortableText from './objects/excerptPortableText';
 import mainImage from './objects/mainImage';
 import authorReference from './objects/authorReference';
+import blogInlineImage from './objects/blogInlineImage';
 
 export default createSchema({
   name: 'captain-senpy',
@@ -39,6 +40,7 @@ export default createSchema({
     siteSettings,
     mainImage,
     authorReference,
+    blogInlineImage,
     bodyPortableText,
     bioPortableText,
     excerptPortableText,
