@@ -25,12 +25,9 @@ const serializers = {
           return <p>{props.children}</p>;
       }
     },
-    mainImage(props) {
+    blogInlineImage(props) {
       return null;
     },
-    // slideshow(props) {
-    //   return <Slideshow {...props.node} />;
-    // },
   },
 };
 

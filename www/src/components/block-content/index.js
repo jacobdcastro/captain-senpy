@@ -7,7 +7,11 @@ const BlockContent = ({ blocks }) => {
   return (
     <div>
       <h3>Block Content Here</h3>
-      <BaseBlockContent blocks={blocks} serializers={serializers} />
+      <BaseBlockContent
+        blocks={blocks}
+        serializers={serializers}
+        imageOptions={{ w: 320, h: 240, fit: 'max' }}
+      />
     </div>
   );
 };

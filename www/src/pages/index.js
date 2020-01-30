@@ -13,6 +13,7 @@ const IndexPage = ({ data }) => {
       <p>Now go build something great.</p>
       <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}></div>
       <Link to="/page-2/">Go to page 2</Link>
+      <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}></div>
       <div>
         <h2>{postData.title}</h2>
         <BlockContent blocks={postData._rawBody} />
