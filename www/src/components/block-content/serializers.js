@@ -4,7 +4,7 @@ import Img from 'gatsby-image';
 const serializers = {
   types: {
     block(props) {
-      console.log(props.node);
+      console.log(props);
       switch (props.node.style) {
         case 'h1':
           return <h1>{props.children}</h1>;
