@@ -1,5 +1,5 @@
 export default {
-  name: 'mainImage',
+  name: 'blogInlineImage',
   type: 'image',
   title: 'Image',
   options: {
