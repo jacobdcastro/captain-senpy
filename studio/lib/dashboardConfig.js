@@ -3,7 +3,7 @@ export default {
     { name: 'structure-menu' },
     {
       name: 'document-list',
-      options: { title: 'Recent blog posts', order: '_createdAt desc', types: ['post'] },
+      options: { title: 'Recent blog posts', order: '_createdAt desc', types: ['blogPost'] },
       layout: { width: 'medium' },
     },
     {

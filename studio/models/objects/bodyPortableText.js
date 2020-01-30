@@ -46,14 +46,16 @@ export default {
           },
         ],
       },
-      of: [{ type: 'authorReference' }],
+      of: [
+        { type: 'authorReference' },
+        {
+          type: 'blogInlineImage',
+          options: { hotspot: true },
+        },
+      ],
     },
     // You can add additional types here. Note that you can't use
     // primitive types such as 'string' and 'number' in the same array
     // as a block type.
-    {
-      type: 'blogInlineImage',
-      options: { hotspot: true },
-    },
   ],
 };

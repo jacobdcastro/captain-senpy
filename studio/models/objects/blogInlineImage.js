@@ -1,7 +1,7 @@
 export default {
   name: 'blogInlineImage',
   type: 'image',
-  title: 'Image',
+  title: 'Blog Inline Image',
   options: {
     hotspot: true,
   },
