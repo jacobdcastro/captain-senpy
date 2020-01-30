@@ -2,7 +2,8 @@ import React from 'react';
 import BaseBlockContent from '@sanity/block-content-to-react';
 import serializers from './serializers';
 
-const BlockContent = blocks => {
+const BlockContent = ({ blocks }) => {
+  console.log(blocks);
   return (
     <div>
       <h3>Block Content Here</h3>

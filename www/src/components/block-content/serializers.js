@@ -1,8 +1,10 @@
 import React from 'react';
+import Img from 'gatsby-image';
 
 const serializers = {
   types: {
     block(props) {
+      console.log(props.node);
       switch (props.node.style) {
         case 'h1':
           return <h1>{props.children}</h1>;
@@ -23,9 +25,9 @@ const serializers = {
           return <p>{props.children}</p>;
       }
     },
-    // figure(props) {
-    //   return <Figure {...props.node} />;
-    // },
+    mainImage(props) {
+      return null;
+    },
     // slideshow(props) {
     //   return <Slideshow {...props.node} />;
     // },

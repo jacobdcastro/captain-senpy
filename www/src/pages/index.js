@@ -5,6 +5,7 @@ import BlockContent from '../components/block-content';
 import Layout from '../components/Layout';
 
 const IndexPage = ({ data }) => {
+  const postData = data.sanityBlogPost;
   return (
     <Layout>
       <h1>Hi people</h1>
@@ -12,7 +13,10 @@ const IndexPage = ({ data }) => {
       <p>Now go build something great.</p>
       <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}></div>
       <Link to="/page-2/">Go to page 2</Link>
-      <BlockContent blocks={data._rawBody} />
+      <div>
+        <h2>{postData.title}</h2>
+        <BlockContent blocks={postData._rawBody} />
+      </div>
     </Layout>
   );
 };
@@ -25,18 +29,16 @@ export default IndexPage;
 
 export const INDEX_PAGE_QUERY = graphql`
   query INDEX_PAGE_QUERY {
-    allSanityBlogPost {
-      edges {
-        node {
-          id
-          title
-          slug {
-            current
-          }
-          publishedAt
-          _rawBody
-        }
+    sanityBlogPost(_id: { eq: "7ceaf036-86a4-4b5b-adc1-0a6f8628581e" }) {
+      id
+      _id
+      slug {
+        current
       }
+      tags
+      title
+      publishedAt
+      _rawBody
     }
   }
 `;
