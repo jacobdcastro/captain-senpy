@@ -31,7 +31,6 @@ export default IndexPage;
 export const INDEX_PAGE_QUERY = graphql`
   query INDEX_PAGE_QUERY {
     sanityBlogPost(_id: { eq: "7ceaf036-86a4-4b5b-adc1-0a6f8628581e" }) {
-      id
       _id
       slug {
         current
