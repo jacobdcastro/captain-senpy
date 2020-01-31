@@ -1,10 +1,9 @@
 import React from 'react';
-import Img from 'gatsby-image';
+import BlogInlineImage from './BlogInlineImage';
 
 const serializers = {
   types: {
     block(props) {
-      console.log(props);
       switch (props.node.style) {
         case 'h1':
           return <h1>{props.children}</h1>;
@@ -26,7 +25,7 @@ const serializers = {
       }
     },
     blogInlineImage(props) {
-      return null;
+      return <BlogInlineImage sanityImgId={props.node.asset._ref} />;
     },
   },
 };
