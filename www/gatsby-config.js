@@ -36,6 +36,8 @@ module.exports = {
         token: process.env.SANITY_CLIENT_PROD_TOKEN, // read-only token
       },
     },
+    `gatsby-plugin-styled-components`,
+    `gatsby-plugin-sass`,
     `gatsby-plugin-react-helmet`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
