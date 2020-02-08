@@ -1,15 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-
-import SEO from './seo';
-import Header from './Header';
-import './layout.css';
+import SEO from '../seo';
+import Sidebar from './SidebarMenu';
+import '../layout.css';
 
 const Layout = ({ children }) => {
   return (
     <>
       <SEO title="Home" />
-      <Header siteTitle="Captain Senpy" />
+      <Sidebar />
       <div
         style={{
           margin: `0 auto`,
@@ -19,11 +18,6 @@ const Layout = ({ children }) => {
         }}
       >
         <main>{children}</main>
-        <footer>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
-        </footer>
       </div>
     </>
   );
