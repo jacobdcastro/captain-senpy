@@ -3,12 +3,11 @@ import { useStaticQuery, graphql, Link } from 'gatsby';
 import Img from 'gatsby-image';
 
 const SidebarMenu = () => {
-  const imgData = useStaticQuery(graphql`
+  const { file } = useStaticQuery(graphql`
     query LOGO_QUERY {
       file(relativePath: { eq: "logo.png" }) {
         childImageSharp {
-          id
-          fluid(quality: 100) {
+          fluid(pngQuality: 100, quality: 100, maxWidth: 300) {
             ...GatsbyImageSharpFluid_withWebp_tracedSVG
           }
         }
@@ -18,7 +17,13 @@ const SidebarMenu = () => {
 
   return (
     <div id="sidebarMenu">
-      <Img fluid={imgData} title="Captain Senpy Logo" alt="heart logo" />
+      <Img
+        id="sidebarLogo"
+        fluid={file.childImageSharp.fluid}
+        title="Captain Senpy Logo"
+        alt="heart logo"
+        style={{ height: '300px', width: '300px' }}
+      />
       <ul className="nav">
         <li>
           <Link activeClassName="activeLink" to="/">
