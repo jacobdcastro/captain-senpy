@@ -29,6 +29,7 @@
     "gatsby-plugin-sass": "^2.1.28",
     "gatsby-plugin-sharp": "^2.4.5",
     "gatsby-plugin-styled-components": "^3.1.19",
+    "gatsby-plugin-typography": "^2.3.22",
     "gatsby-source-filesystem": "^2.1.48",
     "gatsby-source-sanity": "^5.0.5",
     "gatsby-source-sanity-transform-images": "0.0.4",
@@ -40,7 +41,10 @@
     "react-dom": "^16.12.0",
     "react-helmet": "^5.2.1",
     "react-moment": "^0.9.7",
-    "styled-components": "^5.0.1"
+    "react-typography": "^0.16.19",
+    "styled-components": "^5.0.1",
+    "typography": "^0.16.19",
+    "typography-theme-lawton": "^0.16.19"
   },
   "devDependencies": {
     "prettier": "^1.19.1"

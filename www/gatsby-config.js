@@ -36,6 +36,12 @@ module.exports = {
         token: process.env.SANITY_CLIENT_PROD_TOKEN, // read-only token
       },
     },
+    {
+      resolve: `gatsby-plugin-typography`,
+      options: {
+        pathToConfigModule: `src/utils/typography`,
+      },
+    },
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-sass`,
     `gatsby-plugin-react-helmet`,
