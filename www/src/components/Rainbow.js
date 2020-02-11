@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import '../styles/rainbow.scss';
-import useWindowWidth from '../utils/hooks/useWindowWidth';
+import { useWindowWidth } from 'window-dimensions-hooks';
 
 const Wrapper = styled.div`
   ${'' /* transform: scale(${props => props.width}); */}
@@ -9,6 +9,7 @@ const Wrapper = styled.div`
 
 const Rainbow = () => {
   let width = useWindowWidth();
+  console.log(width);
 
   const setScale = w => {
     if (typeof window !== 'undefined') {
