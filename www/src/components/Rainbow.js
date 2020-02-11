@@ -1,23 +1,14 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import '../styles/rainbow.scss';
+import useWindowWidth from '../utils/hooks/useWindowWidth';
 
 const Wrapper = styled.div`
-  ${'' /* transform: scale(0.3); */}
+  ${'' /* transform: scale(${props => props.width}); */}
 `;
 
 const Rainbow = () => {
-  const [width, setWidth] = useState(0);
-
-  useEffect(() => {
-    // only runs if in browser
-    if (typeof window !== 'undefined') {
-      setWidth(window.innerWidth);
-      window.addEventListener('resize', () => {
-        setWidth(window.innerWidth);
-      });
-    }
-  }, []);
+  let width = useWindowWidth();
 
   const setScale = w => {
     if (typeof window !== 'undefined') {
@@ -28,14 +19,14 @@ const Rainbow = () => {
   };
 
   return (
-    <Wrapper width={setScale(width)} className="rainbow">
-      <div class="arc arc-red"></div>
-      <div class="arc arc-orange"></div>
-      <div class="arc arc-yellow"></div>
-      <div class="arc arc-green"></div>
-      <div class="arc arc-blue"></div>
-      <div class="arc arc-purple"></div>
-      <div class="arc arc-transparent"></div>
+    <Wrapper width={useWindowWidth()} className="rainbow">
+      <div className="arc arc-red" />
+      <div className="arc arc-orange" />
+      <div className="arc arc-yellow" />
+      <div className="arc arc-green" />
+      <div className="arc arc-blue" />
+      <div className="arc arc-purple" />
+      <div className="arc arc-transparent" />
     </Wrapper>
   );
 };
