@@ -1,14 +1,15 @@
 import React from 'react';
 import { useStaticQuery, graphql, Link } from 'gatsby';
 import Img from 'gatsby-image';
+import '../../styles/layout/sidebar-menu.scss';
 
 const SidebarMenu = () => {
-  const { file } = useStaticQuery(graphql`
+  const { logo } = useStaticQuery(graphql`
     query LOGO_QUERY {
-      file(relativePath: { eq: "logo.png" }) {
+      logo: file(relativePath: { eq: "logo.png" }) {
         childImageSharp {
           fluid(pngQuality: 100, quality: 100, maxWidth: 300) {
-            ...GatsbyImageSharpFluid_withWebp_tracedSVG
+            ...GatsbyImageSharpFluid_tracedSVG
           }
         }
       }
@@ -16,13 +17,13 @@ const SidebarMenu = () => {
   `);
 
   return (
-    <div id="sidebarMenu">
+    <header id="sidebarMenu">
       <Img
         id="sidebarLogo"
-        fluid={file.childImageSharp.fluid}
+        fluid={logo.childImageSharp.fluid}
         title="Captain Senpy Logo"
         alt="heart logo"
-        style={{ height: '300px', width: '300px' }}
+        style={{ height: '200px', width: '200px' }}
       />
       <ul className="nav">
         <li>
@@ -55,7 +56,7 @@ const SidebarMenu = () => {
         </li>
       </ul>
       <footer>&copy; {new Date().getFullYear()} - Alexis Maddox</footer>
-    </div>
+    </header>
   );
 };
 

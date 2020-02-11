@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Link, graphql } from 'gatsby';
 import BlockContent from '../components/block-content';
-import Layout from '../components/Layout';
+import Layout from '../components/layout';
 import Rainbow from '../components/Rainbow';
 
 const IndexPage = ({ data }) => {
@@ -15,15 +15,15 @@ const IndexPage = ({ data }) => {
       <h1>Hi people</h1>
       <p>Welcome to your new Gatsby site.</p>
       <p>Now go build something great.</p>
-      <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}></div>
+      <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }} />
       <Link to="/page-2/">Go to page 2</Link>
-      <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}></div>
+      <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }} />
       {/* <Rainbow /> */}
-      <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}></div>
-      {/* <div>
+      <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }} />
+      <div>
         <h2>{postData.title}</h2>
         <BlockContent blocks={postData._rawBody} />
-      </div> */}
+      </div>
     </Layout>
   );
 };
