@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Link, graphql } from 'gatsby';
 import BlockContent from '../components/block-content';
-import Layout from '../components/layout';
+import Layout from '../components/layout/Layout';
 import Rainbow from '../components/Rainbow';
 
 const IndexPage = ({ data }) => {

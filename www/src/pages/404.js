@@ -1,5 +1,5 @@
 import React from 'react';
-import Layout from '../components/layout';
+import Layout from '../components/layout/Layout';
 
 const NotFoundPage = () => {
   const seo = { title: '404: Page Not Found' };
