@@ -11,7 +11,7 @@ const Layout = ({ children }) => {
       <SEO title="Home" />
 
       <div id="wrapper">
-        <Sidebar />
+        {/* <Sidebar /> */}
         <main>{children}</main>
       </div>
     </>

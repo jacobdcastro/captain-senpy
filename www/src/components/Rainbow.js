@@ -4,23 +4,30 @@ import '../styles/rainbow.scss';
 import { useWindowWidth } from 'window-dimensions-hooks';
 
 const Wrapper = styled.div`
-  ${'' /* transform: scale(${props => props.width}); */}
+  transform: scale(${props => props.scale});
 `;
 
 const Rainbow = () => {
   let width = useWindowWidth();
-  console.log(width);
 
   const setScale = w => {
-    if (typeof window !== 'undefined') {
-      return;
+    if (w) {
+      const scale = w * 0.0014 + -0.0004;
+      // console.log(scale);
+      if (scale > 2.08) {
+        return 2.08;
+      } else if (scale < 0.42) {
+        return 0.42;
+      } else {
+        return scale;
+      }
     } else {
-      return w;
+      return 1.0;
     }
   };
 
   return (
-    <Wrapper width={useWindowWidth()} className="rainbow">
+    <Wrapper scale={setScale(width)} className="rainbow">
       <div className="arc arc-red" />
       <div className="arc arc-orange" />
       <div className="arc arc-yellow" />
