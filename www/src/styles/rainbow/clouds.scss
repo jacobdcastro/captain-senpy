@@ -1,0 +1,71 @@
+// @import 'compass/css3';
+$border-color: #a5a5b9;
+
+@mixin circle($width) {
+  width: $width;
+  height: $width;
+  border-radius: $width/2;
+}
+@mixin center {
+  position: relative;
+  margin: 0 auto;
+}
+
+.cloud-box {
+  transform: scale(0.55);
+  width: 26em;
+  height: 15em;
+  @include center;
+  position: relative;
+  z-index: 1;
+}
+
+.cloud {
+  position: absolute;
+  background: #e8eefa;
+
+  &:nth-child(1) {
+    border-top: 9px solid $border-color;
+    transform: rotate(-45deg);
+    @include circle(8em);
+    left: 5em;
+    top: 1em;
+  }
+  &:nth-child(2) {
+    border-left: 9px solid $border-color;
+    border-bottom: 9px solid $border-color;
+    z-index: 2;
+    @include circle(9em);
+    bottom: 2em;
+    left: 0;
+  }
+  &:nth-child(3) {
+    border-bottom: 9px solid $border-color;
+    z-index: 1;
+    @include circle(12em);
+    bottom: 0.25em;
+    left: 4em;
+  }
+  &:nth-child(4) {
+    border-top: 9px solid $border-color;
+    transform: rotate(40deg);
+    @include circle(12em);
+    top: 0;
+    right: 3.75em;
+  }
+  &:nth-child(5) {
+    border-right: 9px solid $border-color;
+    border-bottom: 9px solid $border-color;
+    transform: rotate(-21deg);
+    z-index: 2;
+    @include circle(8em);
+    bottom: 3em;
+    right: 0;
+  }
+  &:nth-child(6) {
+    border-bottom: 9px solid $border-color;
+    @include circle(10em);
+    bottom: 0em;
+    right: 4em;
+  }
+}
