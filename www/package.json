@@ -7,7 +7,8 @@
   "author": "Jacob Castro <jdcastro.business@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "start": "gatsby develop",
+    "start": "gatsby develop --host 0.0.0.0 --open",
+    "start-p": "gatsby develop --open",
     "build": "gatsby build",
     "develop": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\" \"!.cache/**\" \"!node_modules/**\" \"!public/**\"",
