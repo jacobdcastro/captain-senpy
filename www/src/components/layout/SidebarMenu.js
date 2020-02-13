@@ -3,7 +3,7 @@ import { useStaticQuery, graphql, Link } from 'gatsby';
 import Img from 'gatsby-image';
 import '../../styles/layout/sidebar-menu.scss';
 
-const SidebarMenu = () => {
+const SidebarMenu = ({ isOpen, setIsOpen }) => {
   const { logo } = useStaticQuery(graphql`
     query LOGO_QUERY {
       logo: file(relativePath: { eq: "logo.png" }) {
@@ -17,7 +17,7 @@ const SidebarMenu = () => {
   `);
 
   return (
-    <header id="sidebarMenu">
+    <header id="sidebarMenu" className={isOpen ? 'isOpen' : 'isClosed'}>
       <Img
         id="sidebarLogo"
         fluid={logo.childImageSharp.fluid}

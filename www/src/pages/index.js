@@ -18,7 +18,7 @@ const IndexPage = ({ data }) => {
       <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }} />
       <Link to="/page-2/">Go to page 2</Link>
       <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }} />
-      <Rainbow />
+      {/* <Rainbow /> */}
       <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }} />
       <div>
         <h2>{postData.title}</h2>
