@@ -13,8 +13,7 @@ export default {
     {
       name: 'summary',
       title: 'Summary',
-      type: 'array',
-      of: [{ type: 'block' }],
+      type: 'excerptPortableText',
     },
     {
       name: 'acts',
