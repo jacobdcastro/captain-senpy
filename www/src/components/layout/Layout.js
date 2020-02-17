@@ -13,9 +13,13 @@ const Layout = ({ children }) => {
     <>
       <SEO title="Home" />
       <div id="wrapper">
-        <Header isOpen={isOpen} setIsOpen={setIsOpen} />
+        {/* <Header isOpen={isOpen} setIsOpen={setIsOpen} /> */}
         <Sidebar isOpen={isOpen} setIsOpen={setIsOpen} />
-        <main>{children}</main>
+
+        <div className="wrapper2">
+          <div className="filler" />
+          <main>{children}</main>
+        </div>
       </div>
     </>
   );

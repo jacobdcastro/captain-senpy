@@ -17,45 +17,57 @@ const SidebarMenu = ({ isOpen, setIsOpen }) => {
   `);
 
   return (
-    <header id="sidebarMenu" className={isOpen ? 'isOpen' : 'isClosed'}>
-      <Img
-        id="sidebarLogo"
-        fluid={logo.childImageSharp.fluid}
-        title="Captain Senpy Logo"
-        alt="heart logo"
-        style={{ height: '200px', width: '200px' }}
-      />
-      <ul className="nav">
-        <li>
-          <Link activeClassName="activeLink" to="/">
-            Home
-          </Link>
-        </li>
-        <li>
-          <Link activeClassName="activeLink" to="/comics">
-            Comics
-          </Link>
-        </li>
-        <li>
-          <Link activeClassName="activeLink" to="/blog">
-            Blog
-          </Link>
-        </li>
-        <li>
-          <Link activeClassName="activeLink" to="/about">
-            About
-          </Link>
-        </li>
-      </ul>
-      <ul className="social-links">
-        <li>
-          <a href="https://instagram.com/pymadd/">Instagram</a>
-        </li>
-        <li>
-          <a href="https://twitter.com/pymadd/">Twitter</a>
-        </li>
-      </ul>
-      <footer>&copy; {new Date().getFullYear()} - Alexis Maddox</footer>
+    <header id="sidebar-menu" className={isOpen ? 'isOpen' : 'isClosed'}>
+      <div>
+        <Img
+          id="sidebar-logo"
+          fluid={logo.childImageSharp.fluid}
+          title="Captain Senpy Logo"
+          alt="heart logo, @captainsenpy"
+          style={{ height: '200px', width: '200px' }}
+        />
+        <h1 className="menu-title">Captain SenPy</h1>
+      </div>
+
+      <div className="link-section">
+        <nav>
+          <ul>
+            <li>
+              <Link activeClassName="active-link" to="/">
+                Home
+              </Link>
+            </li>
+            <li>
+              <Link activeClassName="active-link" to="/comics">
+                Comics
+              </Link>
+            </li>
+            <li>
+              <Link activeClassName="active-link" to="/blog">
+                Blog
+              </Link>
+            </li>
+            <li>
+              <Link activeClassName="active-link" to="/about">
+                About
+              </Link>
+            </li>
+          </ul>
+        </nav>
+
+        <div className="divider" />
+
+        <ul className="social-links">
+          <li>
+            <a href="https://instagram.com/pymadd/">Instagram</a>
+          </li>
+          <li>
+            <a href="https://twitter.com/pymadd/">Twitter</a>
+          </li>
+        </ul>
+      </div>
+
+      <footer>&copy;{new Date().getFullYear()} - Senpy Crafts</footer>
     </header>
   );
 };

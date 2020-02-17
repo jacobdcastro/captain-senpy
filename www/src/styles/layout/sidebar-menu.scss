@@ -1,14 +1,84 @@
-#sidebarMenu {
+@import '../colors.scss';
+
+#sidebar-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
   height: 100vh;
+  width: 100vw;
+  background-color: $pink;
+  padding: 0 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  #sidebar-logo {
+    height: 100px;
+    width: 100px;
+  }
+
+  .menu-title {
+    text-align: center;
+    font-size: 1.5rem;
+  }
+
+  nav {
+    margin-top: -50px;
+    ul {
+      li {
+        list-style-type: none;
+        margin-bottom: 22px;
+        a {
+          font-size: 1.3rem;
+          padding-bottom: 4px;
+          color: $purple;
+          &:hover {
+            text-decoration: none;
+          }
+        }
+        .active-link {
+          border-bottom: 2px solid $purple;
+        }
+      }
+    }
+  }
+
+  .divider {
+    height: 4px;
+    width: 97.5%;
+    background-color: $purple;
+    opacity: 0.3;
+    border-radius: 80%;
+    margin: 25px auto;
+  }
+
+  .social-links {
+    li {
+      list-style-type: none;
+      margin-bottom: 22px;
+      a {
+        font-size: 1.3rem;
+        padding-bottom: 4px;
+        color: $purple;
+        &:hover {
+          text-decoration: none;
+        }
+      }
+      .active-link {
+        border-bottom: 2px solid $purple;
+      }
+    }
+  }
+
+  footer {
+    text-align: center;
+    font-size: 0.7rem;
+    margin-bottom: 15px;
+  }
 }
 
-#sidebarLogo {
-  height: 100px;
-  width: 100px;
-}
-
-ul {
-  li {
-    list-style-type: none;
+@media (min-width: 500px) {
+  #sidebar-menu {
+    width: 250px;
   }
 }
