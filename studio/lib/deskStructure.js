@@ -48,10 +48,19 @@ export default () =>
                     .documentId('indexPage')
                 ),
               S.listItem()
+                .title('About Page')
+                .child(
+                  S.editor()
+                    .title('Edit About Page')
+                    .id('aboutPage')
+                    .schemaType('aboutPage')
+                    .documentId('aboutPage')
+                ),
+              S.listItem()
                 .title('Blog Page')
                 .child(
                   S.editor()
-                    .title('Edit Home Blog Page')
+                    .title('Edit Blog Page')
                     .id('blogPage')
                     .schemaType('blogPage')
                     .documentId('blogPage')
@@ -66,7 +75,7 @@ export default () =>
                     .documentId('comicsPage')
                 ),
               S.listItem()
-                .title('Store Page')
+                .title('Store Page (Coming Soon)')
                 .child(
                   S.editor()
                     .title('Edit Store Page')
@@ -95,7 +104,7 @@ export default () =>
       //   .child(S.documentTypeList('alerts').title('Alerts')),
 
       S.listItem()
-        .title('Store')
+        .title('Store (Coming Soon)')
         .icon(MdShoppingCart)
         .schemaType('product')
         .child(S.documentTypeList('product').title('Products')),

@@ -3,6 +3,7 @@ import schemaTypes from 'all:part:@sanity/base/schema-type';
 
 // site page schemas
 import indexPage from './documents/pages/indexPage';
+import aboutPage from './documents/pages/aboutPage';
 import blogPage from './documents/pages/blogPage';
 import comicsPage from './documents/pages/comicsPage';
 import storePage from './documents/pages/storePage';
@@ -28,6 +29,7 @@ export default createSchema({
   name: 'captain-senpy',
   types: schemaTypes.concat([
     indexPage,
+    aboutPage,
     blogPage,
     comicsPage,
     storePage,

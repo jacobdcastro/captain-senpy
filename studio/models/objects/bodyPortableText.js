@@ -46,7 +46,8 @@ export default {
           },
         ],
       },
-      of: [{ type: 'authorReference' }],
+      // TODO
+      // of: [{ type: 'authorReference' }],
     },
     // TODO {
     //   type: 'blogInlineImage',
