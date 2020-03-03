@@ -8,7 +8,7 @@
     "start": "sanity start",
     "dev": "sanity start",
     "build": "sanity build",
-    "graphql-deploy": "sanity graphql deploy --playground --generation gen1",
+    "graphql-deploy": "sanity graphql deploy --no-playground --generation gen1",
     "format": "prettier-eslint --write \"**/*.js\" \"!node_modules/**\"",
     "lint": "eslint .",
     "test": "sanity check"
