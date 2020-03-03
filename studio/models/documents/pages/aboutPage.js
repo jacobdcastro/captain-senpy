@@ -1,7 +1,7 @@
 // import { format } from 'date-fns';
 
 export default {
-  name: 'indexPage',
+  name: 'aboutPage',
   type: 'document',
   title: 'Home Page',
   fields: [
