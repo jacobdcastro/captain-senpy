@@ -1,0 +1,8 @@
+.blogPostList {
+  display: grid;
+  // grid-template-rows: 50% 50%;
+  grid-template-columns: auto auto;
+  grid-column-gap: 35px;
+  grid-row-gap: 35px;
+  width: 100%;
+}
