@@ -1,8 +1,6 @@
 import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
-
-// context is string of blog post id
-const BlogContext = React.createContext('');
+import { BlogContext } from './index';
 
 const BlogContextParent = ({ children }) => {
   // const { _id } = useStaticQuery(graphql``);
