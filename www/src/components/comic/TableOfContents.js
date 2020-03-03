@@ -4,6 +4,8 @@ import { ComicContext } from '../../utils/contexts/ComicContext';
 const TableOfContents = () => {
   const state = useContext(ComicContext);
 
+  console.log(state);
+
   return (
     <div>
       <nav>

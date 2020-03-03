@@ -12,11 +12,12 @@ const AboutPage = ({ data }) => {
 
   return (
     <Layout>
-      {/* <h1>{pageData.title}</h1> */}
+      <h1>{pageData.title}</h1>
       <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }} />
-      {/* <BlockContent blocks={pageData._rawDescription} /> */}
+      <BlockContent blocks={pageData._rawDescription} />
 
       <h2>About Me!</h2>
+      <BlockContent blocks={pageData._rawBody} />
     </Layout>
   );
 };
@@ -29,34 +30,13 @@ export default AboutPage;
 
 export const ABOUT_PAGE_QUERY = graphql`
   query ABOUT_PAGE_QUERY {
-    # sanityAboutPage {
-    #   _id
-    #   title
-    #   _rawMainImage
-    #   tags
-    #   _rawDescription
-    # }
-
-    allSanityBlogPost {
-      edges {
-        node {
-          _id
-          title
-          slug {
-            _key
-            _type
-            current
-          }
-          authors {
-            author {
-              name
-            }
-          }
-          publishedAt
-          _rawMainImage
-          _rawExcerpt
-        }
-      }
+    sanityAboutPage {
+      _id
+      title
+      _rawMainImage
+      tags
+      _rawDescription
+      _rawBody
     }
   }
 `;

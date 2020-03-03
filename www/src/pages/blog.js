@@ -18,21 +18,36 @@ const BlogPage = ({ data }) => {
 
       <h2>Posts</h2>
       <div className="blogPostList">
-        {posts.map(post => (
-          <BlogPostListing key={post.node._id} data={post} />
-        ))}
-        {posts.map(post => (
-          <BlogPostListing key={post.node._id} data={post} />
-        ))}
-        {posts.map(post => (
-          <BlogPostListing key={post.node._id} data={post} />
-        ))}
-        {posts.map(post => (
-          <BlogPostListing key={post.node._id} data={post} />
-        ))}
-        {posts.map(post => (
-          <BlogPostListing key={post.node._id} data={post} />
-        ))}
+        {posts.map(
+          post =>
+            post.node._id !== '780f95bf-3499-4d23-97bd-22821b6511a6' && (
+              <BlogPostListing key={post.node._id} data={post} />
+            )
+        )}
+        {posts.map(
+          post =>
+            post.node._id !== '780f95bf-3499-4d23-97bd-22821b6511a6' && (
+              <BlogPostListing key={post.node._id} data={post} />
+            )
+        )}
+        {posts.map(
+          post =>
+            post.node._id !== '780f95bf-3499-4d23-97bd-22821b6511a6' && (
+              <BlogPostListing key={post.node._id} data={post} />
+            )
+        )}
+        {posts.map(
+          post =>
+            post.node._id !== '780f95bf-3499-4d23-97bd-22821b6511a6' && (
+              <BlogPostListing key={post.node._id} data={post} />
+            )
+        )}
+        {posts.map(
+          post =>
+            post.node._id !== '780f95bf-3499-4d23-97bd-22821b6511a6' && (
+              <BlogPostListing key={post.node._id} data={post} />
+            )
+        )}
       </div>
     </Layout>
   );
