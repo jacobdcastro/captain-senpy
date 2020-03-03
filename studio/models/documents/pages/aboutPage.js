@@ -6,6 +6,12 @@ export default {
   title: 'Home Page',
   fields: [
     {
+      name: 'title',
+      type: 'string',
+      title: 'Page Title',
+      description: 'Page title that appears in search results and in the browser tab.',
+    },
+    {
       name: 'mainImage',
       type: 'mainImage',
       title: 'Main image',
