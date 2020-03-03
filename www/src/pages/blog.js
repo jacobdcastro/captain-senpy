@@ -4,6 +4,7 @@ import { graphql } from 'gatsby';
 import BlockContent from '../components/block-content';
 import Layout from '../components/layout/Layout';
 import BlogPostListing from '../components/BlogPostListing';
+import '../styles/blog/blog-page.scss';
 
 const BlogPage = ({ data }) => {
   const pageData = data.sanityBlogPage;
@@ -15,9 +16,22 @@ const BlogPage = ({ data }) => {
       <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}></div>
       <BlockContent blocks={pageData._rawDescription} />
 
+      <h2>Posts</h2>
       <div className="blogPostList">
         {posts.map(post => (
-          <BlogPostListing key={post.id} data={post} />
+          <BlogPostListing key={post.node._id} data={post} />
+        ))}
+        {posts.map(post => (
+          <BlogPostListing key={post.node._id} data={post} />
+        ))}
+        {posts.map(post => (
+          <BlogPostListing key={post.node._id} data={post} />
+        ))}
+        {posts.map(post => (
+          <BlogPostListing key={post.node._id} data={post} />
+        ))}
+        {posts.map(post => (
+          <BlogPostListing key={post.node._id} data={post} />
         ))}
       </div>
     </Layout>
@@ -49,6 +63,11 @@ export const BLOG_PAGE_QUERY = graphql`
             _key
             _type
             current
+          }
+          authors {
+            author {
+              name
+            }
           }
           publishedAt
           _rawMainImage
