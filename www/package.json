@@ -7,7 +7,7 @@
   "author": "Jacob Castro <jdcastro.business@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "start": "gatsby develop --host 0.0.0.0 --open",
+    "start": "gatsby develop --port 3313 --host 0.0.0.0 --open",
     "start-p": "gatsby develop --open",
     "build": "gatsby build",
     "develop": "gatsby develop",
