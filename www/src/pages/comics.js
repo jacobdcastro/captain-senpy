@@ -1,14 +1,15 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 import Layout from '../components/layout/Layout';
+import ComicViewer from '../components/comic/ComicViewer';
 
 const ComicsPage = props => {
   const { title, tags, mainImage, _rawBody, _rawDescription } = props.data.sanityComicsPage;
-  console.log(props.data.sanityComicsPage);
 
   return (
     <Layout>
       <h1>{title}</h1>
+      <ComicViewer />
     </Layout>
   );
 };
