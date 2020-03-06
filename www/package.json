@@ -8,7 +8,7 @@
   "license": "MIT",
   "scripts": {
     "start": "gatsby develop --port 3313 --host 0.0.0.0 --open",
-    "start-p": "gatsby develop --open",
+    "start-p": "gatsby develop --port 3313 --open",
     "build": "gatsby build",
     "develop": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\" \"!.cache/**\" \"!node_modules/**\" \"!public/**\"",
