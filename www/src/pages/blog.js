@@ -3,8 +3,9 @@ import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
 import BlockContent from '../components/block-content';
 import Layout from '../components/layout/Layout';
-import BlogPostListing from '../components/BlogPostListing';
+// import BlogPostListing from '../components/BlogPostListing';
 import '../styles/blog/blog-page.scss';
+import SidebarContents from '../components/layout/SidebarContents';
 
 const BlogPage = ({ data }) => {
   const pageData = data.sanityBlogPage;
@@ -12,43 +13,10 @@ const BlogPage = ({ data }) => {
 
   return (
     <Layout>
+      <SidebarContents pageType="blog" />
       <h1>{pageData.title}</h1>
       <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}></div>
       <BlockContent blocks={pageData._rawDescription} />
-
-      <h2>Posts</h2>
-      <div className="blogPostList">
-        {posts.map(
-          post =>
-            post.node._id !== '780f95bf-3499-4d23-97bd-22821b6511a6' && (
-              <BlogPostListing key={post.node._id} data={post} />
-            )
-        )}
-        {posts.map(
-          post =>
-            post.node._id !== '780f95bf-3499-4d23-97bd-22821b6511a6' && (
-              <BlogPostListing key={post.node._id} data={post} />
-            )
-        )}
-        {posts.map(
-          post =>
-            post.node._id !== '780f95bf-3499-4d23-97bd-22821b6511a6' && (
-              <BlogPostListing key={post.node._id} data={post} />
-            )
-        )}
-        {posts.map(
-          post =>
-            post.node._id !== '780f95bf-3499-4d23-97bd-22821b6511a6' && (
-              <BlogPostListing key={post.node._id} data={post} />
-            )
-        )}
-        {posts.map(
-          post =>
-            post.node._id !== '780f95bf-3499-4d23-97bd-22821b6511a6' && (
-              <BlogPostListing key={post.node._id} data={post} />
-            )
-        )}
-      </div>
     </Layout>
   );
 };
