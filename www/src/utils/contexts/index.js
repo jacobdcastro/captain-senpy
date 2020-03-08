@@ -1,6 +1,6 @@
 import { createContext } from 'react';
 
-// context is string of blog post id
-export const BlogContext = createContext('');
-
-export const ComicContext = createContext(null);
+// ? context data is populated in ParentContext
+// ? components in same directory
+export const BlogContext = createContext();
+export const ComicContext = createContext();

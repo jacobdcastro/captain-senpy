@@ -31,7 +31,7 @@ const ComicContextParent = ({ children }) => {
   let allEpisodes = [];
   acts.forEach(act => act.node.episodes.forEach(ep => allEpisodes.push(ep)));
 
-  console.log(allEpisodes);
+  // console.log(allEpisodes);
 
   return <ComicContext.Provider value={allEpisodes}>{children}</ComicContext.Provider>;
 };
