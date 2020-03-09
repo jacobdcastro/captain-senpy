@@ -1,9 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import { BlogContext } from './index';
 
 const BlogContextParent = ({ children }) => {
-  const [blogState, setBlogState] = useState({ current: '' });
   const data = useStaticQuery(graphql`
     query BLOG_POST_VIEWER_QUERY {
       allSanityBlogPost(sort: { fields: publishedAt, order: DESC }) {
@@ -18,17 +17,22 @@ const BlogContextParent = ({ children }) => {
           authors {
             _key
           }
-          publishedAt
+          publishedAt(formatString: "MMMM D, YYYY")
         }
       }
     }
   `);
   const allBlogPosts = data.allSanityBlogPost.nodes;
 
-  useEffect(() => {
-    // combine posts data w/ current id
-    setBlogState({ current: allBlogPosts[0]._id, allBlogPosts });
-  }, []);
+  const setCurrentBlogPost = id => {
+    setBlogState({ ...blogState, current: id });
+  };
+
+  const [blogState, setBlogState] = useState({
+    current: allBlogPosts[0]._id,
+    allBlogPosts,
+    setCurrentBlogPost,
+  });
 
   return <BlogContext.Provider value={blogState}>{children}</BlogContext.Provider>;
 };
