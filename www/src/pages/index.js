@@ -16,13 +16,13 @@ const IndexPage = ({ data }) => {
       <p>Welcome to your new Gatsby site.</p>
       <p>Now go build something great.</p>
       <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }} />
-      <Link to="/page-2/">Go to page 2</Link>
+      <Link to="/blog/">Go to Blog</Link>
       <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }} />
       {/* <Rainbow /> */}
       <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }} />
       <div>
-        <h2>{postData.title}</h2>
-        <BlockContent blocks={postData._rawBody} />
+        {/* <h2>{postData.title}</h2> */}
+        {/* <BlockContent blocks={postData._rawBody} /> */}
       </div>
     </Layout>
   );

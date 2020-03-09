@@ -4,19 +4,22 @@ import { graphql } from 'gatsby';
 import BlockContent from '../components/block-content';
 import Layout from '../components/layout/Layout';
 // import BlogPostListing from '../components/BlogPostListing';
-import '../styles/blog/blog-page.scss';
 import SidebarContents from '../components/layout/SidebarContents';
+import '../styles/blog/blog-page.scss';
 
 const BlogPage = ({ data }) => {
   const pageData = data.sanityBlogPage;
-  const posts = data.allSanityBlogPost.edges;
 
   return (
     <Layout>
-      <SidebarContents pageType="blog" />
-      <h1>{pageData.title}</h1>
-      <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}></div>
-      <BlockContent blocks={pageData._rawDescription} />
+      <div id="blogPageContent">
+        <div className="blogPostContent">
+          <h1>{pageData.title}</h1>
+          <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}></div>
+          <BlockContent blocks={pageData._rawDescription} />
+        </div>
+        <SidebarContents pageType="blog" />
+      </div>
     </Layout>
   );
 };
@@ -35,28 +38,6 @@ export const BLOG_PAGE_QUERY = graphql`
       _rawMainImage
       tags
       _rawDescription
-    }
-
-    allSanityBlogPost {
-      edges {
-        node {
-          _id
-          title
-          slug {
-            _key
-            _type
-            current
-          }
-          authors {
-            author {
-              name
-            }
-          }
-          publishedAt
-          _rawMainImage
-          _rawExcerpt
-        }
-      }
     }
   }
 `;

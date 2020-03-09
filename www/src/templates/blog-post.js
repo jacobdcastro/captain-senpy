@@ -1,12 +1,21 @@
 import React from 'react';
 import { graphql } from 'gatsby';
+import BlockContent from '../components/block-content';
+import SidebarContents from '../components/layout/SidebarContents';
 import Layout from '../components/layout/Layout';
+import '../styles/blog/blog-page.scss';
 
 const BlogPostPage = ({ data }) => {
-  console.log(data);
+  const postData = data.sanityBlogPost;
   return (
     <Layout>
-      <h1>{data.sanityBlogPost.title}</h1>
+      <div id="blogPageContent">
+        <article className="blogPostContent">
+          <h1>{postData.title}</h1>
+          <BlockContent blocks={postData._rawBody} />
+        </article>
+        <SidebarContents pageType="blog" />
+      </div>
     </Layout>
   );
 };
@@ -18,6 +27,17 @@ export const BLOG_POST_QUERY = graphql`
     sanityBlogPost(_id: { eq: $id }) {
       _id
       title
+      slug {
+        current
+      }
+      authors {
+        _key
+        author {
+          name
+        }
+      }
+      publishedAt(formatString: "MMMM D, YYYY")
+      _rawBody
     }
   }
 `;
