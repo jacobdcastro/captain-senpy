@@ -3,15 +3,43 @@ import { Link } from 'gatsby';
 import { BlogContext } from '../../../utils/contexts';
 
 const BlogSidebar = () => {
-  const { allBlogPosts } = useContext(BlogContext);
-  console.log(allBlogPosts);
+  const data = useContext(BlogContext);
+  console.log(data);
+
   return (
     <nav>
-      <h2>Blog Posts</h2>
+      <h3>Recent Blog Posts</h3>
       <ul>
-        {allBlogPosts.map(post => (
-          <li>
-            <Link to={`/blog/${post.slug.current}`}>{post.title}</Link>
+        {data.allBlogPosts.map(post => (
+          <li key={post._id}>
+            <Link to={`/blog/${post.slug.current}`}>
+              <h4>{post.title}</h4>
+              <span>{post.publishedAt}</span>
+            </Link>
+          </li>
+        ))}
+        {data.allBlogPosts.map(post => (
+          <li key={post._id}>
+            <Link to={`/blog/${post.slug.current}`}>
+              <h4>{post.title}</h4>
+              <span>{post.publishedAt}</span>
+            </Link>
+          </li>
+        ))}
+        {data.allBlogPosts.map(post => (
+          <li key={post._id}>
+            <Link to={`/blog/${post.slug.current}`}>
+              <h4>{post.title}</h4>
+              <span>{post.publishedAt}</span>
+            </Link>
+          </li>
+        ))}
+        {data.allBlogPosts.map(post => (
+          <li key={post._id}>
+            <Link to={`/blog/${post.slug.current}`}>
+              <h4>{post.title}</h4>
+              <span>{post.publishedAt}</span>
+            </Link>
           </li>
         ))}
       </ul>

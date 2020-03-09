@@ -6,7 +6,6 @@ const ComicSidebar = () => {
   console.log(data);
   return (
     <nav>
-      <h2>Table of Contents</h2>
       <ul>
         <li>
           <h3>Act 1</h3>
