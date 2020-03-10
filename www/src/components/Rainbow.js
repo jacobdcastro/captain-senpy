@@ -68,7 +68,7 @@ const Rainbow = () => {
       <Arcs />
       <div className="cloud-wrapper">
         <Cloud />
-        <Cloud />
+        {/* <Cloud /> */}
       </div>
     </Wrapper>
   );
