@@ -7,12 +7,6 @@ export default {
   },
   fields: [
     {
-      name: 'imgTitle',
-      title: 'Image Title',
-      type: 'string',
-      description: 'A non-descriptive title of the image.',
-    },
-    {
       name: 'alt',
       type: 'text',
       title: 'Alternative text',

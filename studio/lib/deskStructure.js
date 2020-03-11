@@ -15,6 +15,7 @@ const hiddenDocTypes = listItem =>
     'product',
     'siteSettings',
     'indexPage',
+    'aboutPage',
     'blogPage',
     'comicsPage',
     'storePage',

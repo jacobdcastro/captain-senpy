@@ -18,6 +18,9 @@ export default {
       title: 'Episodes',
       type: 'array',
       of: [{ type: 'episode' }],
+      options: {
+        editModal: 'fullscreen',
+      },
     },
     {
       name: 'description',
