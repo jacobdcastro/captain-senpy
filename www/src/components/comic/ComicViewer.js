@@ -1,5 +1,7 @@
 import React, { useState, useContext } from 'react';
-import ComicContext from '../../utils/contexts/ComicContext';
+import { ComicContext } from '../../utils/contexts';
+import ComicCard from './ComicCard';
+import Controls from './Controls';
 
 const ComicViewer = () => {
   const allEpisodes = useContext(ComicContext);

@@ -4,7 +4,6 @@ import { BlogContext } from '../../../utils/contexts';
 
 const BlogSidebar = () => {
   const data = useContext(BlogContext);
-  console.log(data);
 
   return (
     <nav>
