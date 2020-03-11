@@ -18,6 +18,7 @@ const BlogContextParent = ({ children }) => {
             _key
           }
           publishedAt(formatString: "MMMM D, YYYY")
+          _rawBody
         }
       }
     }

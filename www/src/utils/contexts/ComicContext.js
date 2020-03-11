@@ -11,6 +11,7 @@ const ComicContextParent = ({ children }) => {
             _id
             title
             episodes {
+              _id
               title
               comicImg {
                 alt
@@ -31,9 +32,18 @@ const ComicContextParent = ({ children }) => {
   let allEpisodes = [];
   acts.forEach(act => act.node.episodes.forEach(ep => allEpisodes.push(ep)));
 
-  // console.log(allEpisodes);
+  const setCurrentComic = id => {
+    setComicState({ ...blogState, current: id });
+  };
 
-  return <ComicContext.Provider value={allEpisodes}>{children}</ComicContext.Provider>;
+  const [comicState, setComicState] = useState({
+    current: allEpisodes[0]._id,
+    acts: [],
+    allEpisodes,
+    setCurrentComic,
+  });
+
+  return <ComicContext.Provider value={comicState}>{children}</ComicContext.Provider>;
 };
 
 export default ComicContextParent;
