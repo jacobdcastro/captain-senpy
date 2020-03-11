@@ -2,7 +2,7 @@ import React from 'react';
 import { graphql } from 'gatsby';
 import BlockContent from '../components/block-content';
 import SidebarContents from '../components/layout/SidebarContents';
-import Layout from '../components/layout/Layout';
+import Layout from '../components/layout';
 import '../styles/blog/blog-page.scss';
 
 const BlogPostPage = ({ data }) => {
