@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Link, graphql } from 'gatsby';
 import BlockContent from '../components/block-content';
-import Layout from '../components/layout/Layout';
+import Layout from '../components/layout';
 import Rainbow from '../components/Rainbow';
 
 const IndexPage = ({ data }) => {
@@ -18,7 +18,7 @@ const IndexPage = ({ data }) => {
       <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }} />
       <Link to="/blog/">Go to Blog</Link>
       <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }} />
-      <Rainbow />
+      {/* <Rainbow /> */}
       <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }} />
       <div>
         {/* <h2>{postData.title}</h2> */}

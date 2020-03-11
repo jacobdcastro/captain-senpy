@@ -2,14 +2,18 @@ import React from 'react';
 import { graphql } from 'gatsby';
 import Layout from '../components/layout';
 import ComicViewer from '../components/comic/ComicViewer';
+import SidebarContents from '../components/layout/SidebarContents';
 
 const ComicsPage = props => {
   const { title, tags, mainImage, _rawBody, _rawDescription } = props.data.sanityComicsPage;
 
   return (
     <Layout>
-      <h1>{title}</h1>
-      <ComicViewer />
+      <div>
+        <h1>{title}</h1>
+        <ComicViewer />
+      </div>
+      <SidebarContents pageType="comic" />
     </Layout>
   );
 };
