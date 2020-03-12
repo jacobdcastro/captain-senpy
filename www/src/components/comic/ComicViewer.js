@@ -1,15 +1,17 @@
 import React, { useState, useContext } from 'react';
 import { ComicContext } from '../../utils/contexts';
-import ComicCard from './ComicCard';
+import ComicDeck from './ComicDeck';
 import Controls from './Controls';
 
 const ComicViewer = () => {
-  const allEpisodes = useContext(ComicContext);
-  console.log(allEpisodes);
-
+  const { allEpisodes } = useContext(ComicContext);
   return (
-    <div id="comicViewer">
-      <h1>Comic number 1!</h1>
+    <div>
+      <h1>Comic</h1>
+      <div id="comicViewer">
+        <ComicDeck cards={allEpisodes} />
+        <Controls />
+      </div>
     </div>
   );
 };

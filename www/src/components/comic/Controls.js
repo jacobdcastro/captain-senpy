@@ -3,8 +3,8 @@ import React from 'react';
 const Controls = () => {
   return (
     <div>
-      <button>Oi</button>
-      <button>Oi</button>
+      <button>Prev</button>
+      <button>Next</button>
     </div>
   );
 };

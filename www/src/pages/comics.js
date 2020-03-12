@@ -3,17 +3,17 @@ import { graphql } from 'gatsby';
 import Layout from '../components/layout';
 import ComicViewer from '../components/comic/ComicViewer';
 import SidebarContents from '../components/layout/SidebarContents';
+import '../styles/comic/comic-page.scss';
 
 const ComicsPage = props => {
   const { title, tags, mainImage, _rawBody, _rawDescription } = props.data.sanityComicsPage;
 
   return (
     <Layout>
-      <div>
-        <h1>{title}</h1>
+      <div id="comicPageContent">
         <ComicViewer />
+        <SidebarContents pageType="comic" />
       </div>
-      <SidebarContents pageType="comic" />
     </Layout>
   );
 };
@@ -26,9 +26,6 @@ export const COMICS_PAGE_QUERY = graphql`
       id
       title
       mainImage {
-        _key
-        _type
-        imgTitle
         alt
       }
       tags

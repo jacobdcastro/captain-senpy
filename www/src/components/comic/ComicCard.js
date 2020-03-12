@@ -1,11 +1,17 @@
 import React from 'react';
 import Img from 'gatsby-image';
+import { animated, interpolate } from 'react-spring';
 
-const ComicCard = () => {
+const ComicCard = ({ ep, bind, i, rot, scale, trans }) => {
   return (
-    <div>
-      <Img />
-    </div>
+    <animated.div
+      className="comic-card"
+      style={{ transform: interpolate([rot, scale], trans) }}
+      {...bind(i)}
+    >
+      <h2>{ep.title}</h2>
+      <Img fluid={ep.comicImg.asset.fluid} alt={ep.comicImg.alt} title={ep.title} />
+    </animated.div>
   );
 };
 
