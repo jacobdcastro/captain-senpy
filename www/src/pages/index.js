@@ -13,12 +13,7 @@ const IndexPage = ({ data }) => {
 
   return (
     <Layout seo={seo} isOpen={isOpen} setIsOpen={setIsOpen}>
-      <Rainbow />
-      <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }} />
-      <div>
-        {/* <h2>{postData.title}</h2> */}
-        {/* <BlockContent blocks={postData._rawBody} /> */}
-      </div>
+      {isOpen && <Rainbow />}
     </Layout>
   );
 };
