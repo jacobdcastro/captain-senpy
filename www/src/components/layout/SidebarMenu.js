@@ -19,7 +19,7 @@ const SidebarMenu = ({ isOpen, setIsOpen }) => {
   `);
 
   return (
-    <header id="sidebar-menu" className={isOpen || (width >= 650 && 'open')}>
+    <header id="sidebar-menu" className={isOpen && 'open'}>
       <button
         className={`hamburger hamburger--arrow${isOpen ? ' is-active' : ''}`}
         type="button"

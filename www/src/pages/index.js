@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { Link, graphql } from 'gatsby';
 import BlockContent from '../components/block-content';
@@ -6,19 +6,14 @@ import Layout from '../components/layout';
 import Rainbow from '../components/Rainbow';
 
 const IndexPage = ({ data }) => {
+  const [isOpen, setIsOpen] = useState(false);
   const postData = data.sanityBlogPost;
 
   const seo = {};
 
   return (
-    <Layout seo={seo}>
-      <h1>MY NAME IS</h1>
-      <p>Welcome to your new Gatsby site.</p>
-      <p>Now go build something great.</p>
-      <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }} />
-      <Link to="/blog/">Go to Blog</Link>
-      <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }} />
-      {/* <Rainbow /> */}
+    <Layout seo={seo} isOpen={isOpen} setIsOpen={setIsOpen}>
+      <Rainbow />
       <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }} />
       <div>
         {/* <h2>{postData.title}</h2> */}

@@ -7,16 +7,19 @@ import { useWindowWidth } from 'window-dimensions-hooks';
 const Wrapper = styled.div`
   transform: scale(${props => props.scale});
   position: absolute;
-  margin: auto;
+  margin: 200px auto;
 
   .cloud-wrapper {
     margin-top: 100px;
-    background-color: rgba(250, 0, 0, 0.3);
 
     .cloud-box {
+      position: absolute;
+      top: 65px;
       &:nth-child(1) {
-        position: absolute;
-        left: 0;
+        left: -100px;
+      }
+      &:nth-child(2) {
+        left: -375px;
       }
     }
   }
@@ -24,12 +27,12 @@ const Wrapper = styled.div`
 
 const setScale = w => {
   if (w) {
-    const scale = w * 0.0014 + -0.0004;
+    const scale = w * 0.00124 + -0.0004;
     // console.log(scale);
     if (scale > 2.08) {
       return 2.08;
     } else if (scale < 0.42) {
-      return 0.42;
+      return 0.42; // set minimum
     } else {
       return scale;
     }
@@ -68,7 +71,7 @@ const Rainbow = () => {
       <Arcs />
       <div className="cloud-wrapper">
         <Cloud />
-        {/* <Cloud /> */}
+        <Cloud />
       </div>
     </Wrapper>
   );

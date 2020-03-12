@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useState, useContext } from 'react';
 import PropTypes from 'prop-types';
 import { useStaticQuery, graphql } from 'gatsby';
 import { Redirect } from '@reach/router';
@@ -10,6 +10,7 @@ import '../styles/blog/blog-page.scss';
 
 const BlogPage = ({ data }) => {
   const contextData = useContext(BlogContext);
+  const [isOpen, setIsOpen] = useState(false);
   const pageData = data.sanityBlogPage;
 
   const recentBlogPost = contextData.allBlogPosts.find(post => post._id === contextData.current);
@@ -18,7 +19,7 @@ const BlogPage = ({ data }) => {
   // const redirectToContext = () => <Redirect to={`/en`} />;
 
   return (
-    <Layout>
+    <Layout isOpen={isOpen} setIsOpen={setIsOpen}>
       <div id="blogPageContent">
         <div className="blogPostContent">
           <h1>{recentBlogPost.title}</h1>

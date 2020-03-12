@@ -3,30 +3,37 @@
   flex-direction: row;
 }
 
+h1 {
+  text-align: center;
+  margin-bottom: 90px;
+}
+
 #comicViewer {
   cursor: grab;
-
+  height: 500px;
   .comic-deck-wrapper {
     position: relative;
-    height: 600px;
-    width: 800px;
+    height: 400px;
+    width: 80vw;
     .comic-deck {
       position: absolute;
       will-change: transform;
       display: flex;
+      height: 400px;
+      width: 100%;
       align-items: center;
       justify-content: center;
 
       .comic-card {
         padding: 40px;
-        height: 550px;
-        width: 433px;
+        height: 30em;
+        width: 70%;
         border-radius: 30px;
         background-color: white;
         will-change: transform;
         box-shadow: 0px 0 15px #333;
         text-align: center;
-        margin: 25px;
+        // margin: 25px;
 
         .comic-img {
           user-drag: none;
@@ -35,6 +42,50 @@
           -webkit-user-drag: none;
           -webkit-user-select: none;
           -ms-user-select: none;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 630px) {
+  #comicViewer {
+    .comic-deck-wrapper {
+      .comic-deck {
+        width: 78%;
+        .comic-card {
+          width: 300px;
+          height: 400px;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 800px) {
+  #comicViewer {
+    .comic-deck-wrapper {
+      margin-top: 130px;
+      .comic-deck {
+        width: 82%;
+        .comic-card {
+          width: 500px;
+          height: 600px;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  #comicViewer {
+    .comic-deck-wrapper {
+      margin-top: 130px;
+      .comic-deck {
+        width: 90%;
+        .comic-card {
+          width: 600px;
+          height: 700px;
         }
       }
     }
