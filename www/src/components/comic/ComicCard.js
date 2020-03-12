@@ -10,7 +10,12 @@ const ComicCard = ({ ep, bind, i, rot, scale, trans }) => {
       {...bind(i)}
     >
       <h2>{ep.title}</h2>
-      <Img fluid={ep.comicImg.asset.fluid} alt={ep.comicImg.alt} title={ep.title} />
+      <Img
+        className="comic-img"
+        fluid={ep.comicImg.asset.fluid}
+        alt={ep.comicImg.alt}
+        title={ep.title}
+      />
     </animated.div>
   );
 };

@@ -12,7 +12,7 @@ const ComicsPage = props => {
     <Layout>
       <div id="comicPageContent">
         <ComicViewer />
-        <SidebarContents pageType="comic" />
+        {/* <SidebarContents pageType="comic" /> */}
       </div>
     </Layout>
   );

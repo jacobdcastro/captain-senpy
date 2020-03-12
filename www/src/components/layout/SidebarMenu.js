@@ -1,9 +1,11 @@
 import React from 'react';
 import { useStaticQuery, graphql, Link } from 'gatsby';
 import Img from 'gatsby-image';
+import { useWindowWidth } from 'window-dimensions-hooks';
 import '../../styles/layout/sidebar-menu.scss';
 
 const SidebarMenu = ({ isOpen, setIsOpen }) => {
+  const width = useWindowWidth();
   const { logo } = useStaticQuery(graphql`
     query LOGO_QUERY {
       logo: file(relativePath: { eq: "logo.png" }) {
@@ -17,8 +19,18 @@ const SidebarMenu = ({ isOpen, setIsOpen }) => {
   `);
 
   return (
-    <header id="sidebar-menu" className={isOpen ? 'isOpen' : 'isClosed'}>
-      <div>
+    <header id="sidebar-menu" className={isOpen || (width >= 650 && 'open')}>
+      <button
+        className={`hamburger hamburger--arrow${isOpen ? ' is-active' : ''}`}
+        type="button"
+        onClick={() => setIsOpen(!isOpen)}
+      >
+        <span className="hamburger-box">
+          <span className="hamburger-inner"></span>
+        </span>
+      </button>
+
+      <div className="logo-section">
         <Img
           id="sidebar-logo"
           fluid={logo.childImageSharp.fluid}

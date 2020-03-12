@@ -4,13 +4,16 @@ import ComicDeck from './ComicDeck';
 import Controls from './Controls';
 
 const ComicViewer = () => {
-  const { allEpisodes } = useContext(ComicContext);
+  const comicData = useContext(ComicContext);
+  console.log(comicData);
   return (
     <div>
       <h1>Comic</h1>
       <div id="comicViewer">
-        <ComicDeck cards={allEpisodes} />
-        <Controls />
+        <div className="comic-deck-wrapper">
+          <ComicDeck {...comicData} cards={comicData.allEpisodes} />
+        </div>
+        {/* <Controls /> */}
       </div>
     </div>
   );

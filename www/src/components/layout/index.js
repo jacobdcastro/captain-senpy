@@ -5,9 +5,11 @@ import Header from './Header';
 import Sidebar from './SidebarMenu';
 import '../../styles/layout/layout.css';
 import '../../styles/layout/layout.scss';
+import { useWindowWidth } from 'window-dimensions-hooks';
 
 const Layout = ({ children }) => {
   const [isOpen, setIsOpen] = useState(false);
+  const width = useWindowWidth();
 
   return (
     <>
@@ -17,7 +19,7 @@ const Layout = ({ children }) => {
         <Sidebar isOpen={isOpen} setIsOpen={setIsOpen} />
 
         <div className="wrapper2">
-          <div className="filler" />
+          {width >= 650 && <div className="filler" />}
           <main>{children}</main>
         </div>
       </div>
