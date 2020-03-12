@@ -13,7 +13,7 @@ const IndexPage = ({ data }) => {
 
   return (
     <Layout seo={seo} isOpen={isOpen} setIsOpen={setIsOpen}>
-      {isOpen && <Rainbow />}
+      <Rainbow isOpen={isOpen} />
     </Layout>
   );
 };

@@ -14,7 +14,7 @@ const BlogPage = ({ data }) => {
   const pageData = data.sanityBlogPage;
 
   const recentBlogPost = contextData.allBlogPosts.find(post => post._id === contextData.current);
-  // console.log(contextData);
+  console.log(contextData);
 
   // const redirectToContext = () => <Redirect to={`/en`} />;
 

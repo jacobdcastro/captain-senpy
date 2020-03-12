@@ -5,7 +5,7 @@
 
 h1 {
   text-align: center;
-  margin-bottom: 90px;
+  margin-bottom: 0px;
 }
 
 #comicViewer {
@@ -26,8 +26,8 @@ h1 {
 
       .comic-card {
         padding: 40px;
-        height: 30em;
-        width: 70%;
+        height: 90vw;
+        width: 70vw;
         border-radius: 30px;
         background-color: white;
         will-change: transform;
@@ -48,7 +48,10 @@ h1 {
   }
 }
 
-@media (min-width: 630px) {
+@media (min-width: 650px) {
+  h1 {
+    margin-bottom: 60px;
+  }
   #comicViewer {
     .comic-deck-wrapper {
       .comic-deck {

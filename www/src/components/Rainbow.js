@@ -22,6 +22,17 @@ const Wrapper = styled.div`
         left: -375px;
       }
     }
+
+    @media (max-width: 480px) {
+      .cloud-box {
+        &:nth-child(1) {
+          left: -68px;
+        }
+        &:nth-child(2) {
+          left: -350px;
+        }
+      }
+    }
   }
 `;
 
@@ -64,17 +75,21 @@ const Cloud = () => (
   </div>
 );
 
-const Rainbow = () => {
+const Rainbow = ({ isOpen }) => {
   let width = useWindowWidth();
-  return (
-    <Wrapper scale={setScale(width)}>
-      <Arcs />
-      <div className="cloud-wrapper">
-        <Cloud />
-        <Cloud />
-      </div>
-    </Wrapper>
-  );
+  if (!isOpen) {
+    return (
+      <Wrapper scale={setScale(width)}>
+        <Arcs />
+        <div className="cloud-wrapper">
+          <Cloud />
+          <Cloud />
+        </div>
+      </Wrapper>
+    );
+  } else {
+    return null;
+  }
 };
 
 export default Rainbow;
