@@ -6,22 +6,37 @@
 #comicViewer {
   cursor: grab;
 
-  .comic-deck {
-    position: absolute;
-    will-change: transform;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    .comic-card {
-      padding: 40px;
-      width: 433px;
-      border-radius: 30px;
-      background-color: white;
+  .comic-deck-wrapper {
+    position: relative;
+    height: 600px;
+    width: 800px;
+    .comic-deck {
+      position: absolute;
       will-change: transform;
-      box-shadow: 0px 0 15px #333;
-      text-align: center;
-      margin: 25px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .comic-card {
+        padding: 40px;
+        height: 550px;
+        width: 433px;
+        border-radius: 30px;
+        background-color: white;
+        will-change: transform;
+        box-shadow: 0px 0 15px #333;
+        text-align: center;
+        margin: 25px;
+
+        .comic-img {
+          user-drag: none;
+          user-select: none;
+          -moz-user-select: none;
+          -webkit-user-drag: none;
+          -webkit-user-select: none;
+          -ms-user-select: none;
+        }
+      }
     }
   }
 }

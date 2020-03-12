@@ -3,7 +3,7 @@
 #sidebar-menu {
   position: fixed;
   top: 0;
-  left: 0;
+  left: -100vh;
   height: 100vh;
   width: 100vw;
   background-color: $purple;
@@ -15,15 +15,49 @@
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
   box-shadow: -4px 0 30px #444;
+  transition: 400ms;
 
-  #sidebar-logo {
-    height: 100px;
-    width: 100px;
+  &.open {
+    left: 0;
   }
 
-  .menu-title {
-    text-align: center;
-    font-size: 1.5rem;
+  .hamburger {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+
+    &.is-active {
+      .hamburger-inner,
+      .hamburger-inner::before,
+      .hamburger-inner::after {
+        background-color: white;
+      }
+    }
+
+    .hamburger-inner,
+    .hamburger-inner::before,
+    .hamburger-inner::after {
+      background-color: black;
+    }
+  }
+
+  .logo-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 40px;
+
+    #sidebar-logo {
+      height: 100px;
+      width: 100px;
+      margin: auto;
+      text-align: center;
+    }
+
+    .menu-title {
+      text-align: center;
+      font-size: 1.5rem;
+    }
   }
 
   nav {
@@ -82,8 +116,12 @@
   }
 }
 
-@media (min-width: 500px) {
+@media (min-width: 650px) {
   #sidebar-menu {
-    width: 250px;
+    width: 220px;
+
+    .hamburger {
+      display: none;
+    }
   }
 }
