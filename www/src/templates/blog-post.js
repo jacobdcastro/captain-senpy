@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { graphql } from 'gatsby';
 import BlockContent from '../components/block-content';
 import SidebarContents from '../components/layout/SidebarContents';
@@ -6,9 +6,10 @@ import Layout from '../components/layout';
 import '../styles/blog/blog-page.scss';
 
 const BlogPostPage = ({ data }) => {
+  const [isOpen, setIsOpen] = useState(false);
   const postData = data.sanityBlogPost;
   return (
-    <Layout>
+    <Layout isOpen={isOpen} setIsOpen={setIsOpen}>
       <div id="blogPageContent">
         <article className="blogPostContent">
           <h1>{postData.title}</h1>

@@ -19,7 +19,7 @@ const BlogSidebar = ({ isOpen, setIsOpen }) => {
   console.log(data);
 
   return (
-    <nav className={`sidebar-contents blog${isOpen ? ' open' : ''}`}>
+    <nav className={isOpen ? 'sidebar-contents blog open' : 'sidebar-contents blog'}>
       <h2>
         Captain SenPy's
         <br />
