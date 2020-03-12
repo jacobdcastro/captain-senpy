@@ -1,0 +1,27 @@
+#comicPageContent {
+  display: flex;
+  flex-direction: row;
+}
+
+#comicViewer {
+  cursor: grab;
+
+  .comic-deck {
+    position: absolute;
+    will-change: transform;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .comic-card {
+      padding: 40px;
+      width: 433px;
+      border-radius: 30px;
+      background-color: white;
+      will-change: transform;
+      box-shadow: 0px 0 15px #333;
+      text-align: center;
+      margin: 25px;
+    }
+  }
+}
