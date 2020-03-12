@@ -31,6 +31,7 @@ const ComicContextParent = ({ children }) => {
   const acts = data.allSanityAct.edges;
   let allEpisodes = [];
   acts.forEach(act => act.node.episodes.forEach(ep => allEpisodes.push(ep)));
+  allEpisodes.reverse();
 
   const setCurrentComic = key => {
     setComicState({ ...comicState, current: key });
