@@ -6,7 +6,7 @@ const BlogSidebar = () => {
   const data = useContext(BlogContext);
 
   return (
-    <nav>
+    <nav className="sidebar-contents blog">
       <h3>Recent Blog Posts</h3>
       <ul>
         {data.allBlogPosts.map(post => (

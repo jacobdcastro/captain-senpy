@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import BlogSidebar from './BlogSidebar';
 import ComicSidebar from './ComicSidebar';
+import '../../../styles/layout/sidebar-contents.scss'
 
 const SidebarContents = props => {
   if (props.pageType === 'blog') {

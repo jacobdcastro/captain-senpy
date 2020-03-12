@@ -1,0 +1,27 @@
+.sidebar-contents {
+  flex: 1;
+  max-height: 700px;
+  overflow: scroll;
+  overflow-x: hidden;
+  width: 260px;
+
+  ul {
+    li {
+      font-size: medium;
+      list-style-type: none;
+
+      a {
+        h4 {
+          margin-bottom: 0;
+        }
+        span {
+          font-size: 0.8rem;
+        }
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}

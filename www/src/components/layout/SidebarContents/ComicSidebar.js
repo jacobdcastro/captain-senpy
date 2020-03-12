@@ -3,26 +3,26 @@ import { ComicContext } from '../../../utils/contexts';
 
 const ComicSidebar = () => {
   const data = useContext(ComicContext);
-  console.log(data);
   return (
-    <nav>
+    <nav className="sidebar-contents comic">
       <ul>
-        <li>
-          <h3>Act 1</h3>
-          <ul>
-            <li>Ep 1</li>
-            <li>Ep 2</li>
-            <li>Ep 3</li>
-          </ul>
-        </li>
-        <li>
-          <h3>Act 1</h3>
-          <ul>
-            <li>Ep 1</li>
-            <li>Ep 2</li>
-            <li>Ep 3</li>
-          </ul>
-        </li>
+        {data.acts.map(({ node }) => {
+          return (
+            <li key={node._id}>
+              <h3>{node.title}</h3>
+              <ul>
+                {node.episodes.map(ep => (
+                  <li
+                    key={ep._key}
+                    className={`li-episode${ep._key === data.current ? ' current' : ''}`}
+                  >
+                    <button onClick={() => data.setCurrentComic(ep._key)}>{ep.title}</button>
+                  </li>
+                ))}
+              </ul>
+            </li>
+          );
+        })}
       </ul>
     </nav>
   );

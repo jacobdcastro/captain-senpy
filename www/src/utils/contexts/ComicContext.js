@@ -11,12 +11,12 @@ const ComicContextParent = ({ children }) => {
             _id
             title
             episodes {
-              _id
+              _key
               title
               comicImg {
                 alt
                 asset {
-                  id
+                  _id
                   fluid {
                     ...GatsbySanityImageFluid_withWebp
                   }
@@ -32,13 +32,14 @@ const ComicContextParent = ({ children }) => {
   let allEpisodes = [];
   acts.forEach(act => act.node.episodes.forEach(ep => allEpisodes.push(ep)));
 
-  const setCurrentComic = id => {
-    setComicState({ ...blogState, current: id });
+  const setCurrentComic = key => {
+    setComicState({ ...comicState, current: key });
+    console.log('current: ', key);
   };
 
   const [comicState, setComicState] = useState({
-    current: allEpisodes[0]._id,
-    acts: [],
+    current: allEpisodes[0]._key,
+    acts,
     allEpisodes,
     setCurrentComic,
   });
