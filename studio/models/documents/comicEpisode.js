@@ -9,6 +9,11 @@ export default {
       type: 'string',
     },
     {
+      name: 'caption',
+      title: 'Caption',
+      type: 'text',
+    },
+    {
       name: 'comicImg',
       title: 'Comic Image',
       type: 'mainImage',
