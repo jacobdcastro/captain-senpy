@@ -4,9 +4,12 @@ import Helmet from 'react-helmet';
 import { useStaticQuery, graphql } from 'gatsby';
 
 const SEO = ({ description, lang, meta, title }) => {
-  const { site } = useStaticQuery(
+  const { site, logo } = useStaticQuery(
     graphql`
       query {
+        logo: file(relativePath: { eq: "logo.png" }) {
+          publicURL
+        }
         site {
           siteMetadata {
             title
@@ -61,7 +64,9 @@ const SEO = ({ description, lang, meta, title }) => {
           content: metaDescription,
         },
       ].concat(meta)}
-    />
+    >
+      <link rel="icon" href={logo.publicURL} type="image/x-icon" />
+    </Helmet>
   );
 };
 
