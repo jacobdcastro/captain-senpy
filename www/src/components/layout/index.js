@@ -12,7 +12,7 @@ const Layout = ({ children, isOpen, setIsOpen }) => {
 
   return (
     <>
-      <SEO title="Home" />
+      <SEO />
       <div id="wrapper">
         {/* <Header isOpen={isOpen} setIsOpen={setIsOpen} /> */}
         <SidebarMenu isOpen={isOpen} setIsOpen={setIsOpen} />

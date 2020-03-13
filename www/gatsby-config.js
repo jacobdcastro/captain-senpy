@@ -5,7 +5,7 @@ require('dotenv').config({
 module.exports = {
   siteMetadata: {
     title: `Captain Senpy`,
-    description: `Website for awesome web comics by Alexis Maddox.`,
+    description: `Comics, and more comics`,
     author: 'Jacob D. Castro',
   },
   plugins: [

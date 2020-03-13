@@ -59,11 +59,11 @@ const SidebarMenu = ({ isOpen, setIsOpen }) => {
                 Blog
               </Link>
             </li>
-            <li>
+            {/* <li>
               <Link activeClassName="active-link" to="/about">
                 About
               </Link>
-            </li>
+            </li> */}
           </ul>
         </nav>
 

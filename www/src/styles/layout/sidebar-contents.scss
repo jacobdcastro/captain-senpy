@@ -62,6 +62,7 @@
       margin-bottom: 15px;
 
       a {
+        color: black;
         display: flex;
         flex-direction: row;
 
@@ -106,8 +107,11 @@
     pointer-events: visibleFill;
     box-shadow: -2px 0 19px #777;
     margin-left: 20px;
+    background-color: white;
+    border-radius: 15px;
 
     h2 {
+      background-color: white;
       opacity: 1;
       position: relative;
       top: 0;
