@@ -9,13 +9,16 @@ const ComicCard = ({ ep, bind, i, rot, scale, trans }) => {
       style={{ transform: interpolate([rot, scale], trans) }}
       {...bind(i)}
     >
-      <h2>{ep.title}</h2>
-      <Img
-        className="comic-img"
-        fluid={ep.comicImg.asset.fluid}
-        alt={ep.comicImg.alt}
-        title={ep.title}
-      />
+      <div className="grab-layer" />
+      <div className="card-content-wrapper">
+        <Img
+          className="comic-img"
+          fluid={ep.comicImg.asset.fluid}
+          alt={ep.comicImg.alt}
+          title={ep.title}
+        />
+        <h2>{ep.title}</h2>
+      </div>
     </animated.div>
   );
 };

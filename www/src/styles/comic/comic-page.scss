@@ -13,8 +13,11 @@ h1 {
   height: 500px;
   .comic-deck-wrapper {
     position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     height: 400px;
-    width: 80vw;
+    width: 24rem;
     .comic-deck {
       position: absolute;
       will-change: transform;
@@ -23,6 +26,7 @@ h1 {
       width: 100%;
       align-items: center;
       justify-content: center;
+      margin-top: 45px;
 
       .comic-card {
         padding: 40px;
@@ -35,13 +39,26 @@ h1 {
         text-align: center;
         // margin: 25px;
 
-        .comic-img {
-          user-drag: none;
-          user-select: none;
-          -moz-user-select: none;
-          -webkit-user-drag: none;
-          -webkit-user-select: none;
-          -ms-user-select: none;
+        .grab-layer {
+          position: absolute;
+          height: 100%;
+          width: 100%;
+          padding: 40px;
+          top: 0;
+          left: 0;
+          z-index: 4;
+        }
+        .card-content-layer {
+          position: absolute;
+          z-index: 3;
+          .comic-img {
+            user-drag: none;
+            user-select: none;
+            -moz-user-select: none;
+            -webkit-user-drag: none;
+            -webkit-user-select: none;
+            -ms-user-select: none;
+          }
         }
       }
     }
