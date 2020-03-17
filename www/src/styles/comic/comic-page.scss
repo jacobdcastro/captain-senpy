@@ -26,7 +26,7 @@ h1 {
       width: 100%;
       align-items: center;
       justify-content: center;
-      margin-top: 45px;
+      margin-top: 60%;
 
       .comic-card {
         padding: 40px;
@@ -72,10 +72,11 @@ h1 {
   #comicViewer {
     .comic-deck-wrapper {
       .comic-deck {
-        width: 78%;
+        margin-top: 15px;
+        // width: 78%;
         .comic-card {
           width: 300px;
-          height: 400px;
+          height: 340px;
         }
       }
     }
@@ -87,10 +88,10 @@ h1 {
     .comic-deck-wrapper {
       margin-top: 130px;
       .comic-deck {
-        width: 82%;
+        // width: 82%;
         .comic-card {
           width: 500px;
-          height: 600px;
+          height: 500px;
         }
       }
     }
@@ -102,10 +103,10 @@ h1 {
     .comic-deck-wrapper {
       margin-top: 130px;
       .comic-deck {
-        width: 90%;
+        // width: 90%;
         .comic-card {
-          width: 600px;
-          height: 700px;
+          width: 800px;
+          height: 500px;
         }
       }
     }
